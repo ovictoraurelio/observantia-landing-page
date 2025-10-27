@@ -33,6 +33,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Setup Pages
+        id: pages
         uses: actions/configure-pages@v4
         with:
           static_site_generator: next
@@ -41,7 +42,21 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Build with Next.js
-        run: pnpm next build
+        run: pnpm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+
+      - name: Verify build output
+        run: |
+          echo "Checking if out directory exists..."
+          ls -la
+          if [ -d "out" ]; then
+            echo "✓ out directory found"
+            ls -la out/
+          else
+            echo "✗ out directory not found!"
+            exit 1
+          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
