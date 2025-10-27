@@ -49,11 +49,10 @@ export default function LandingPage() {
             Fase MVP - T=0 em desenvolvimento
           </Badge>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance leading-tight">
-            Gestão inteligente de documentos administrativos
+            Checagem de conformidade para editais e contratos
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 text-pretty max-w-2xl mx-auto leading-relaxed">
-            Plataforma open source para padronizar, rastrear e validar editais e contratos no IFPE com eficiência,
-            transparência e conformidade.
+            Plataforma open source para auditoria prévia e validação de conformidade de editais, termos de referência e contratos no IFPE.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" className="w-full sm:w-auto">
@@ -94,10 +93,10 @@ export default function LandingPage() {
       <section id="funcionalidades" className="container mx-auto px-4 py-20 md:py-32">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
-            Funcionalidades completas para gestão documental
+            Auditoria automatizada para documentos administrativos
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
-            Ferramentas integradas para cada etapa do processo administrativo
+            Ferramentas especializadas para checagem de conformidade em cada etapa da construção documental
           </p>
         </div>
 
@@ -119,9 +118,9 @@ export default function LandingPage() {
               <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
                 <CheckCircle2 className="w-6 h-6 text-accent" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Validação Automática</h3>
+              <h3 className="text-xl font-semibold mb-2">Checagem de Conformidade</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Checklists configuráveis para garantir conformidade com campos obrigatórios e referências legais.
+                Validação automática com base na Lei 14.133/2021 e normas internas do IFPE para editais e contratos.
               </p>
             </CardContent>
           </Card>
@@ -131,9 +130,9 @@ export default function LandingPage() {
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                 <Users className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Fluxo de Aprovação</h3>
+              <h3 className="text-xl font-semibold mb-2">Auditoria Prévia</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Revisão colaborativa com múltiplos papéis: administrativo, jurídico, gestor e auditoria.
+                Processo estruturado de revisão: administrativo, jurídico, auditoria interna e aprovação final.
               </p>
             </CardContent>
           </Card>
@@ -182,7 +181,7 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance">
-                Transforme a gestão documental do seu campus
+                Fortaleça a auditoria de contratos do seu campus
               </h2>
               <div className="space-y-6">
                 <div className="flex gap-4">
@@ -190,9 +189,9 @@ export default function LandingPage() {
                     <Clock className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Redução de tempo</h3>
+                    <h3 className="font-semibold mb-1">Redução de retrabalho</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Automatize validações e reduza o tempo médio de revisão de documentos em até 60%.
+                      Automatize checagens de conformidade e elimine erros comuns na construção de editais.
                     </p>
                   </div>
                 </div>
@@ -202,9 +201,9 @@ export default function LandingPage() {
                     <CheckCircle2 className="w-5 h-5 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Maior conformidade</h3>
+                    <h3 className="font-semibold mb-1">Conformidade garantida</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Garanta que todos os documentos atendam aos requisitos legais e institucionais.
+                      Assegure aderência à Lei 14.133/2021 e normas internas antes da publicação.
                     </p>
                   </div>
                 </div>
@@ -226,9 +225,9 @@ export default function LandingPage() {
                     <Users className="w-5 h-5 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Colaboração eficiente</h3>
+                    <h3 className="font-semibold mb-1">Auditoria estruturada</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Integre equipes administrativas, jurídicas e de gestão em um único fluxo.
+                      Integre setores de licitação, jurídico e auditoria interna em fluxo padronizado.
                     </p>
                   </div>
                 </div>
@@ -373,10 +372,10 @@ export default function LandingPage() {
       <section className="container mx-auto px-4 py-20 md:py-32">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance">
-            Pronto para modernizar sua gestão documental?
+            Pronto para fortalecer sua auditoria de contratos?
           </h2>
           <p className="text-lg text-muted-foreground mb-8 text-pretty leading-relaxed">
-            Junte-se aos campi do IFPE que já estão transformando seus processos administrativos com o ObservantIA.
+            Junte-se aos campi do IFPE que já estão implementando checagem automatizada de conformidade com o ObservantIA.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" className="w-full sm:w-auto">
@@ -401,7 +400,7 @@ export default function LandingPage() {
                 <span className="text-lg font-semibold">ObservantIA</span>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Plataforma open source para gestão documental no IFPE.
+                Plataforma open source para auditoria e conformidade de editais no IFPE.
               </p>
             </div>
 
