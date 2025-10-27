@@ -33,28 +33,33 @@ jobs:
           cache: 'pnpm'
 
       - name: Setup Pages
-        id: pages
         uses: actions/configure-pages@v4
-        with:
-          static_site_generator: next
 
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
       - name: Build with Next.js
-        run: pnpm run build
-        env:
-          NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: |
+          echo "Starting Next.js build..."
+          pnpm run build
+          echo "Build completed, checking output..."
+          ls -la
 
       - name: Verify build output
         run: |
-          echo "Checking if out directory exists..."
-          ls -la
+          echo "Verifying output directory..."
           if [ -d "out" ]; then
             echo "✓ out directory found"
             ls -la out/
+          elif [ -d ".next" ]; then
+            echo "Found .next directory instead of out"
+            echo "This means output: 'export' might not be working"
+            ls -la .next/
+            exit 1
           else
-            echo "✗ out directory not found!"
+            echo "✗ No output directory found!"
+            echo "Available directories:"
+            find . -maxdepth 2 -type d -name "*build*" -o -name "*out*" -o -name "*dist*" -o -name ".next"
             exit 1
           fi
 
