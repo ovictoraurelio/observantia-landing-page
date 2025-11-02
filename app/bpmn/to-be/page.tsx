@@ -16,7 +16,7 @@ export default function ToBePage() {
           </Link>
           <div className="flex items-center gap-3">
             <Button variant="outline" size="sm" asChild>
-              <a href="/bpmn/observantia.svg" download>
+              <a href="/bpmn/observantia-2.svg" download>
                 <Download className="w-4 h-4 mr-2" />
                 Baixar SVG
               </a>
@@ -46,7 +46,7 @@ export default function ToBePage() {
           </div>
           <div className="min-w-max">
             <img
-              src="/bpmn/observantia.svg"
+              src="/bpmn/observantia-2.svg"
               alt="Diagrama BPMN TO-BE do ObservantIA"
               className="w-full h-auto"
               style={{ minWidth: "3610px" }}
