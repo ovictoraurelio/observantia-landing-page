@@ -542,22 +542,38 @@ export default function StatusReport1Page() {
 
       {/* Dialog para visualização fullscreen */}
       <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
-        <DialogContent className="max-w-[95vw] max-h-[95vh] w-full h-full p-0 overflow-auto">
-          <div className="relative w-full h-full">
+        <DialogContent className="max-w-[100vw] max-h-[100vh] w-screen h-screen p-0 overflow-auto border-0">
+          <div className="relative w-full min-h-screen bg-background/95 backdrop-blur-sm">
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-background/80 backdrop-blur-sm border border-border flex items-center justify-center hover:bg-background transition-colors"
+              className="fixed top-4 right-4 z-50 w-12 h-12 rounded-full bg-background border-2 border-border shadow-lg flex items-center justify-center hover:bg-accent hover:border-accent transition-colors"
               aria-label="Fechar"
             >
-              <X className="w-5 h-5" />
+              <X className="w-6 h-6" />
             </button>
             {selectedImage && (
-              <div className="p-8 flex items-center justify-center min-h-full">
-                <img
-                  src={selectedImage.src}
-                  alt={selectedImage.alt}
-                  className="max-w-full h-auto object-contain"
-                />
+              <div className="w-full p-4 md:p-8">
+                <div className="max-w-7xl mx-auto">
+                  <img
+                    src={selectedImage.src}
+                    alt={selectedImage.alt}
+                    className="w-full h-auto cursor-zoom-in hover:cursor-zoom-out"
+                    style={{ maxWidth: '100%', height: 'auto' }}
+                    onClick={(e) => {
+                      const img = e.currentTarget
+                      if (img.style.transform === 'scale(1.5)') {
+                        img.style.transform = 'scale(1)'
+                        img.style.cursor = 'zoom-in'
+                      } else {
+                        img.style.transform = 'scale(1.5)'
+                        img.style.cursor = 'zoom-out'
+                      }
+                    }}
+                  />
+                  <p className="text-center text-sm text-muted-foreground mt-4">
+                    Clique na imagem para dar zoom • Use scroll para navegar
+                  </p>
+                </div>
               </div>
             )}
           </div>
