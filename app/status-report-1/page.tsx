@@ -44,7 +44,7 @@ export default function StatusReport1Page() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <FileText className="w-5 h-5 text-primary" />
-                Visão Geral do Projeto
+                Visão Geral do 1º Status Report
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -223,7 +223,7 @@ export default function StatusReport1Page() {
                 </CardContent>
               </Card>
 
-              {/* Matriz SPIOC */}
+              {/* Matriz SIPOC */}
               <Card className="border-border hover:border-primary/50 transition-colors">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
@@ -231,9 +231,9 @@ export default function StatusReport1Page() {
                       <FileText className="w-6 h-6 text-accent" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-semibold mb-2">Matriz SPIOC</h3>
+                      <h3 className="font-semibold mb-2">Matriz SIPOC</h3>
                       <p className="text-sm text-muted-foreground mb-4">
-                        Stakeholder, Process, Input, Output, Control - Análise completa de processos e stakeholders.
+                        Supplier, Input, Process, Output, Customer - Análise completa de processos e stakeholders.
                       </p>
                       <div className="flex gap-2">
                         <Button size="sm" variant="outline" asChild>
@@ -283,7 +283,7 @@ export default function StatusReport1Page() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Matrizes de Análise</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Visualização das matrizes CSD e SPIOC desenvolvidas para análise detalhada dos processos e cenários do cliente.
+              Visualização das matrizes CSD e SIPOC desenvolvidas para análise detalhada dos processos e cenários do cliente.
             </p>
           </div>
 
@@ -305,7 +305,7 @@ export default function StatusReport1Page() {
                   <div className="bg-muted/30 rounded-lg p-4 border border-border">
                     <div className="space-y-3">
                       <img 
-                        src="/matriz-csd.png" 
+                        src="/entregaveis/MatrizCSD.png" 
                         alt="Matriz CSD - Customer Scenario Discovery"
                         className="w-full h-auto rounded-lg border border-border/50"
                       />
@@ -330,12 +330,12 @@ export default function StatusReport1Page() {
               </CardContent>
             </Card>
 
-            {/* Matriz SPIOC */}
+            {/* Matriz SIPOC */}
             <Card className="border-border">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <FileText className="w-5 h-5 text-accent" />
-                  Matriz SPIOC - Stakeholder, Process, Input, Output, Control
+                  Matriz SIPOC - Supplier, Input, Process, Output, Customer
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -347,12 +347,12 @@ export default function StatusReport1Page() {
                   <div className="bg-muted/30 rounded-lg p-4 border border-border">
                     <div className="space-y-3">
                       <img 
-                        src="/matriz-spioc.png" 
-                        alt="Matriz SPIOC - Stakeholder, Process, Input, Output, Control"
+                        src="/entregaveis/MatrizSIPOC.png" 
+                        alt="Matriz SIPOC - Supplier, Input, Process, Output, Customer"
                         className="w-full h-auto rounded-lg border border-border/50"
                       />
                       <div className="text-center">
-                        <h4 className="font-semibold">Matriz SPIOC</h4>
+                        <h4 className="font-semibold">Matriz SIPOC</h4>
                         <p className="text-sm text-muted-foreground">Análise de Processos e Stakeholders</p>
                       </div>
                     </div>
@@ -403,7 +403,7 @@ export default function StatusReport1Page() {
               <div className="space-y-6">
                 <div className="bg-background rounded-lg p-6 border border-border">
                   <img 
-                    src="/fluxo-as-is.png" 
+                    src="/entregaveis/fluxo-as-is.svg" 
                     alt="Fluxo AS-IS - Processo atual de gestão de editais e contratos"
                     className="w-full h-auto rounded-lg border border-border/50"
                   />
@@ -414,8 +414,8 @@ export default function StatusReport1Page() {
                     <h4 className="font-semibold text-primary mb-2">Identificados</h4>
                     <ul className="text-sm text-muted-foreground space-y-1">
                       <li>• 12 etapas principais</li>
-                      <li>• 8 pontos de gargalo</li>
-                      <li>• 15 stakeholders envolvidos</li>
+                      <li>• Vários pontos de gargalo</li>
+                      <li>• Múltiplos stakeholders envolvidos</li>
                     </ul>
                   </div>
                   <div className="bg-accent/5 rounded-lg p-4 border border-accent/20">
