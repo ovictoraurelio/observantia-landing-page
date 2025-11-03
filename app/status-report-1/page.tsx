@@ -532,7 +532,7 @@ export default function StatusReport1Page() {
 
       {/* Dialog para visualização fullscreen */}
       <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
-        <DialogContent className="max-w-[100vw] max-h-[100vh] w-screen h-screen p-0 overflow-auto border-0">
+        <DialogContent className="!max-w-none !w-screen !h-screen !top-0 !left-0 !translate-x-0 !translate-y-0 !rounded-none p-0 overflow-auto border-0" showCloseButton={false}>
           <div className="relative w-full min-h-screen bg-background/95 backdrop-blur-sm">
             <button
               onClick={() => setSelectedImage(null)}
@@ -543,27 +543,24 @@ export default function StatusReport1Page() {
             </button>
             {selectedImage && (
               <div className="w-full p-4 md:p-8">
-                <div className="max-w-7xl mx-auto">
-                  <img
-                    src={selectedImage.src}
-                    alt={selectedImage.alt}
-                    className="w-full h-auto cursor-zoom-in hover:cursor-zoom-out"
-                    style={{ maxWidth: '100%', height: 'auto' }}
-                    onClick={(e) => {
-                      const img = e.currentTarget
-                      if (img.style.transform === 'scale(1.5)') {
-                        img.style.transform = 'scale(1)'
-                        img.style.cursor = 'zoom-in'
-                      } else {
-                        img.style.transform = 'scale(1.5)'
-                        img.style.cursor = 'zoom-out'
-                      }
-                    }}
-                  />
-                  <p className="text-center text-sm text-muted-foreground mt-4">
-                    Clique na imagem para dar zoom • Use scroll para navegar
-                  </p>
-                </div>
+                <img
+                  src={selectedImage.src}
+                  alt={selectedImage.alt}
+                  className="w-full h-auto cursor-zoom-in hover:cursor-zoom-out"
+                  onClick={(e) => {
+                    const img = e.currentTarget
+                    if (img.style.transform === 'scale(1.5)') {
+                      img.style.transform = 'scale(1)'
+                      img.style.cursor = 'zoom-in'
+                    } else {
+                      img.style.transform = 'scale(1.5)'
+                      img.style.cursor = 'zoom-out'
+                    }
+                  }}
+                />
+                <p className="text-center text-sm text-muted-foreground mt-4">
+                  Clique na imagem para dar zoom • Use scroll para navegar
+                </p>
               </div>
             )}
           </div>
