@@ -785,7 +785,7 @@ export default function LandingPage() {
             </div>
             <div className="mt-12 pt-8 border-t border-primary-foreground/20">
               <p className="text-sm text-primary-foreground/80">
-                Licença GPLv3 • Desenvolvido pelo IFPE Reitoria • Contribuições bem-vindas
+                Licença GPLv3 • Desenvolvido pelo Grupo 1 - Observantia • Contribuições são bem-vindas
               </p>
             </div>
           </div>
