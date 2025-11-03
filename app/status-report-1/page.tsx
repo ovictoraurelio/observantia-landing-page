@@ -5,27 +5,17 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Dialog, DialogContent } from "@/components/ui/dialog"
-import { ArrowLeft, FileText, ExternalLink, Download, Eye, X } from "lucide-react"
+import { MainHeader } from "@/components/main-header"
+import { SubHeader } from "@/components/sub-header"
+import { FileText, ExternalLink, Download, Eye, X } from "lucide-react"
 import Link from "next/link"
 
 export default function StatusReport1Page() {
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null)
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/">
-            <Button variant="ghost" size="sm">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Voltar
-            </Button>
-          </Link>
-          <Badge variant="secondary" className="bg-accent text-accent-foreground">
-            Status Report 1
-          </Badge>
-        </div>
-      </header>
+      <MainHeader />
+      <SubHeader backTo="/" backLabel="Voltar" badge="Status Report 1" />
 
       {/* Hero */}
       <section className="container mx-auto px-4 py-12 md:py-16">

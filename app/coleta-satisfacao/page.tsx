@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Logo } from "@/components/logo";
+import { MainHeader } from "@/components/main-header";
+import { SubHeader } from "@/components/sub-header";
 import { CheckCircle, AlertCircle, Mail, MapPin } from "lucide-react";
 
 type Likert5 = 1 | 2 | 3 | 4 | 5;
@@ -165,17 +167,8 @@ export default function ColetaSatisfacaoPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Logo size="md" />
-          <nav className="hidden md:flex items-center gap-6">
-            <a href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Início
-            </a>
-          </nav>
-        </div>
-      </header>
+      <MainHeader />
+      <SubHeader backTo="/" backLabel="Voltar para início" />
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-8 max-w-4xl">
