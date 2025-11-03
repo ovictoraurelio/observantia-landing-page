@@ -772,8 +772,10 @@ export default function LandingPage() {
               evolua a plataforma junto conosco.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" variant="secondary" className="w-full sm:w-auto">
-                Ver no GitHub
+              <Button size="lg" variant="secondary" className="w-full sm:w-auto" asChild>
+                <a href="https://github.com/observantia/cin-ufpe" target="_blank" rel="noopener noreferrer">
+                  Ver no GitHub
+                </a>
               </Button>
               <Button
                 size="lg"
@@ -802,8 +804,10 @@ export default function LandingPage() {
             Junte-se às organizações que já estão transformando seus processos administrativos com o ObservantIA.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" className="w-full sm:w-auto">
-              Solicitar demonstração
+            <Button size="lg" className="w-full sm:w-auto" asChild>
+              <a href="https://app.observantia.com.br" target="_blank" rel="noopener noreferrer">
+                Solicitar demonstração
+              </a>
             </Button>
             <Button size="lg" variant="outline" className="w-full sm:w-auto bg-transparent">
               Falar com a equipe
