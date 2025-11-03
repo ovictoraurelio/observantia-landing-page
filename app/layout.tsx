@@ -16,15 +16,15 @@ export const metadata: Metadata = {
   description:
     "Plataforma open source para padronização, rastreamento e validação de documentos administrativos no IFPE. Gestão inteligente de editais e contratos com eficiência, transparência e conformidade.",
   keywords: ["OBSERVANTIA", "gestão documental", "contratos", "editais", "IFPE", "transparência", "conformidade"],
-  authors: [{ name: "IFPE Reitoria" }],
-  creator: "IFPE",
-  publisher: "IFPE",
+  authors: [{ name: "Grupo 1 - Observantia" }],
+  creator: "Grupo 1 - Observantia",
+  publisher: "Grupo 1 - Observantia",
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://observantia.ifpe.edu.br",
+    url: "https://observantia.com.br",
     title: "OBSERVANTIA - Transparência e Conformidade em Cada Contrato",
-    description: "Plataforma open source para gestão inteligente de documentos administrativos no IFPE",
+    description: "Plataforma open source para elaboração inteligente de documentos administrativos em conformidade",
     siteName: "OBSERVANTIA",
     images: [
       {

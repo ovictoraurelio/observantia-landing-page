@@ -199,7 +199,7 @@ export default function ColetaSatisfacaoPage() {
       <main className="container mx-auto px-4 py-8 max-w-4xl">
         <div className="text-center mb-8">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">
-            Coleta de Satisfação — IFPE
+            Coleta de Satisfação — Cliente
           </h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             O objetivo desta página é medir a <strong>aderência</strong> da solução
@@ -529,7 +529,7 @@ export default function ColetaSatisfacaoPage() {
             </div>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Mail className="w-4 h-4" />
-              <span>contato@observantia.ifpe.edu.br</span>
+              <span>contato@observantia.com.br</span>
             </div>
           </div>
         </div>

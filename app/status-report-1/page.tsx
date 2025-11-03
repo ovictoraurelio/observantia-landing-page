@@ -52,7 +52,7 @@ export default function StatusReport1Page() {
                 <h3 className="text-lg font-semibold mb-3">Sobre o ObservantIA</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   O ObservantIA é uma plataforma open source desenvolvida para padronizar, rastrear e validar editais e
-                  contratos no IFPE. O projeto está em fase MVP (T=0), focando em fluxos de trabalho humanos antes da
+                  contratos no IFPE. O projeto está em fase de planejamento e descoberta, focando em fluxos de trabalho humanos antes da
                   implementação de recursos de IA.
                 </p>
                 <h3 className="text-lg font-semibold mb-3 mt-6">Objetivos da Primeira Entrega</h3>

@@ -596,7 +596,7 @@ export default function LandingPage() {
                 <h3 className="text-2xl font-semibold mb-2">Prof. Dr. Alexandre Vasconcelos</h3>
                 <p className="text-sm text-muted-foreground mb-2">Centro de Informática - UFPE</p>
                 <Badge variant="secondary" className="mb-4">
-                  Orientador Principal
+                  Orientador
                 </Badge>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                   Especialista em Engenharia de Software, Gestão de Processos de Negócio e Planejamento de Projetos
@@ -621,7 +621,7 @@ export default function LandingPage() {
                 <h3 className="text-2xl font-semibold mb-2">Profª Drª Jéssyka Vilela</h3>
                 <p className="text-sm text-muted-foreground mb-2">Centro de Informática - UFPE</p>
                 <Badge variant="secondary" className="mb-4">
-                  Co-orientadora
+                  Orientadora
                 </Badge>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                   Especialista em Engenharia de Requisitos, Gestão de Projetos e Processos de Software
@@ -647,7 +647,7 @@ export default function LandingPage() {
               Código aberto, transparência institucional
             </h2>
             <p className="text-lg mb-8 text-primary-foreground/90 text-pretty leading-relaxed">
-              O ObservantIA é um projeto open source desenvolvido para e pela comunidade do IFPE. Contribua, adapte e
+              O ObservantIA é um projeto open source desenvolvido para atender a dor real de um órgão público com elaboração de editais e contratos para contratação de bens e serviços. Contribua, adapte e
               evolua a plataforma junto conosco.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
