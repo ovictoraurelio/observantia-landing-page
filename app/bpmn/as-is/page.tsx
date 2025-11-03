@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { FileText, ArrowLeft, Construction } from "lucide-react"
+import { ArrowLeft, Construction } from "lucide-react"
 import Link from "next/link"
+import { Logo } from "@/components/logo"
 
 export default function AsIsPage() {
   return (
@@ -9,11 +10,8 @@ export default function AsIsPage() {
       {/* Header */}
       <header className="border-b border-border bg-card/50 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <FileText className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <span className="text-xl font-semibold">ObservantIA</span>
+          <Link href="/" className="hover:opacity-80 transition-opacity">
+            <Logo size="sm" />
           </Link>
           <Link href="/bpmn">
             <Button variant="ghost" size="sm">
@@ -36,7 +34,7 @@ export default function AsIsPage() {
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">Em construção</p>
               <p className="text-muted-foreground mb-8 leading-relaxed max-w-xl">
                 O diagrama do processo atual (AS-IS) está sendo desenvolvido. Em breve você poderá visualizar o fluxo de
-                trabalho antes da implementação do ObservantIA.
+                trabalho antes da implementação do OBSERVANTIA.
               </p>
               <Link href="/bpmn">
                 <Button>

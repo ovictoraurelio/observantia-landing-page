@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
-import { FileText, ArrowLeft, ZoomIn, Download } from "lucide-react"
+import { ArrowLeft, ZoomIn, Download } from "lucide-react"
 import Link from "next/link"
+import { Logo } from "@/components/logo"
 
 export default function ToBePage() {
   return (
@@ -8,11 +9,8 @@ export default function ToBePage() {
       {/* Header */}
       <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <FileText className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <span className="text-xl font-semibold">ObservantIA</span>
+          <Link href="/" className="hover:opacity-80 transition-opacity">
+            <Logo size="sm" />
           </Link>
           <div className="flex items-center gap-3">
             <Button variant="outline" size="sm" asChild>
@@ -34,8 +32,8 @@ export default function ToBePage() {
       {/* Main Content */}
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
-          <h1 className="text-3xl font-bold mb-2">Diagrama TO-BE - ObservantIA</h1>
-          <p className="text-muted-foreground">Processo otimizado com o ObservantIA implementado e em operação</p>
+          <h1 className="text-3xl font-bold mb-2">Diagrama TO-BE - OBSERVANTIA</h1>
+          <p className="text-muted-foreground">Processo otimizado com o OBSERVANTIA implementado e em operação</p>
         </div>
 
         {/* BPMN Diagram Container */}
@@ -47,7 +45,7 @@ export default function ToBePage() {
           <div className="min-w-max">
             <img
               src="/bpmn/observantia-2.svg"
-              alt="Diagrama BPMN TO-BE do ObservantIA"
+              alt="Diagrama BPMN TO-BE do OBSERVANTIA"
               className="w-full h-auto"
               style={{ minWidth: "3610px" }}
             />

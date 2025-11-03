@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { FileText, CheckCircle2, Users, BarChart3, Shield, GitBranch, Clock, FileCheck } from "lucide-react"
+import { Logo } from "@/components/logo"
 
 export default function LandingPage() {
   return (
@@ -9,12 +10,7 @@ export default function LandingPage() {
       {/* Header */}
       <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <FileCheck className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <span className="text-xl font-semibold">ObservantIA</span>
-          </div>
+          <Logo size="md" />
           <nav className="hidden md:flex items-center gap-6">
             <a
               href="#funcionalidades"
@@ -394,13 +390,8 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 py-12">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                  <FileCheck className="w-5 h-5 text-primary-foreground" />
-                </div>
-                <span className="text-lg font-semibold">ObservantIA</span>
-              </div>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <Logo size="md" showTagline className="mb-4" />
+              <p className="text-sm text-muted-foreground leading-relaxed mt-2">
                 Plataforma open source para gestão documental no IFPE.
               </p>
             </div>

@@ -1,0 +1,18 @@
+<svg width="1024" height="576" viewBox="0 0 1024 576" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1024" height="576" fill="#1E1E1E"/>
+  
+  <!-- OBSERVANT text in white -->
+  <text x="112" y="340" font-family="Arial, sans-serif" font-size="120" font-weight="400" fill="#FFFFFF" letter-spacing="0">
+    OBSERVANT
+  </text>
+  
+  <!-- IA text in red -->
+  <text x="792" y="340" font-family="Arial, sans-serif" font-size="120" font-weight="800" fill="#E94E2E" letter-spacing="0">
+    IA
+  </text>
+  
+  <!-- Tagline -->
+  <text x="112" y="395" font-family="Arial, sans-serif" font-size="16" font-weight="300" fill="#FFFFFF" letter-spacing="6">
+    TRANSPARÊNCIA E CONFORMIDADE EM CADA CONTRATO
+  </text>
+</svg>

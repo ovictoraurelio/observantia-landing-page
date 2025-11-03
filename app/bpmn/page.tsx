@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { FileText, ArrowRight } from "lucide-react"
 import Link from "next/link"
+import { Logo } from "@/components/logo"
 
 export default function BPMNPage() {
   return (
@@ -9,11 +10,8 @@ export default function BPMNPage() {
       {/* Header */}
       <header className="border-b border-border bg-card/50 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <FileText className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <span className="text-xl font-semibold">ObservantIA</span>
+          <Link href="/" className="hover:opacity-80 transition-opacity">
+            <Logo size="sm" />
           </Link>
           <Link href="/">
             <Button variant="ghost" size="sm">
@@ -29,7 +27,7 @@ export default function BPMNPage() {
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-balance">Modelagem de Processos BPMN</h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
-              Visualize os fluxos de trabalho do ObservantIA através de diagramas BPMN detalhados
+              Visualize os fluxos de trabalho do OBSERVANTIA através de diagramas BPMN detalhados
             </p>
           </div>
 
@@ -43,7 +41,7 @@ export default function BPMNPage() {
                   </div>
                   <h2 className="text-3xl font-bold mb-4">AS-IS</h2>
                   <p className="text-muted-foreground mb-6 leading-relaxed">
-                    Processo atual de gestão documental antes da implementação do ObservantIA
+                    Processo atual de gestão documental antes da implementação do OBSERVANTIA
                   </p>
                   <div className="flex items-center gap-2 text-primary font-medium group-hover:gap-4 transition-all">
                     Ver diagrama
@@ -62,7 +60,7 @@ export default function BPMNPage() {
                   </div>
                   <h2 className="text-3xl font-bold mb-4">TO-BE</h2>
                   <p className="text-muted-foreground mb-6 leading-relaxed">
-                    Processo otimizado com o ObservantIA implementado e em operação
+                    Processo otimizado com o OBSERVANTIA implementado e em operação
                   </p>
                   <div className="flex items-center gap-2 text-accent font-medium group-hover:gap-4 transition-all">
                     Ver diagrama
