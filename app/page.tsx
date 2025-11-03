@@ -45,11 +45,11 @@ export default function LandingPage() {
             Fase MVP - T=0 em desenvolvimento
           </Badge>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance leading-tight">
-            Gestão inteligente de Editais e Contratos
+            {/* Gestão inteligente de Editais e Contratos */}
+            Da demanda à publicação, em tempo recorde
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 text-pretty max-w-2xl mx-auto leading-relaxed">
-            Plataforma open source para padronizar, rastrear e validar editais e contratos no IFPE com eficiência,
-            transparência e conformidade.
+            Plataforma open source para organizar a esteira de elaboração de Editais e Contratos com checklists inteligentes e trilha de auditoria, promovendo transparência e conformidade.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" className="w-full sm:w-auto">
