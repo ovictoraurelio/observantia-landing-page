@@ -110,11 +110,11 @@ export default function LandingPage() {
                   <Badge variant="secondary" className="w-full justify-center bg-accent text-accent-foreground mb-3">
                     Em Andamento
                   </Badge>
-                  <a href="/status-report-1">
-                    <Button size="sm" className="w-full">
+                  <Button size="sm" className="w-full" asChild>
+                    <a href="/status-report-1">
                       Visualizar
-                    </Button>
-                  </a>
+                    </a>
+                  </Button>
                 </CardContent>
               </Card>
             </div>
@@ -677,7 +677,7 @@ export default function LandingPage() {
                   <div className="w-32 h-32 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full mb-4 flex items-center justify-center">
                     <div className="text-4xl font-bold text-accent">AS</div>
                   </div>
-                  <h3 className="text-2xl font-semibold mb-2">André Silva</h3>
+                  <h3 className="text-2xl font-semibold mb-2">André Barros</h3>
                   <p className="text-sm text-muted-foreground mb-2">Instituto Federal de Pernambuco</p>
                   <Badge variant="secondary" className="mb-4">
                     Especialista
