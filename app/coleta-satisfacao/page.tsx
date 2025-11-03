@@ -23,11 +23,14 @@ export default function ColetaSatisfacaoPage() {
   const [probAdocao, setProbAdocao] = useState<number>(5);
 
   const [modulos, setModulos] = useState({
-    geracaoEditais: 3,
-    verificacaoConformidade: 4,
-    gestaoContratos: 4,
-    fluxosAprovacao: 3,
-    auditoriaRelatorios: 4,
+    geracaoEditais: 5,
+    geracaoContratos: 5,
+    verificacaoConformidade: 5,
+    checklistConformidade: 5,
+    verificacaoConformidadeIA: 5,
+    fluxoAprovacaoProcuradoria: 5,
+    fluxoAprovacaoGestor: 5,
+    relatorios: 5,
   });
 
   const [dores, setDores] = useState("");
@@ -113,69 +116,45 @@ export default function ColetaSatisfacaoPage() {
     setOkMsg(null);
     setErrMsg(null);
 
-    const payload = {
-      anonimo,
-      nome: anonimo ? undefined : nome,
-      email: anonimo ? undefined : email,
-      unidade: anonimo ? undefined : unidade,
-      cargo: anonimo ? undefined : cargo,
-      aderenciaSetor,
-      valorPercebido,
-      facilidadeUso,
-      prioridade,
-      probAdocao,
-      relevanciaModulos: modulos,
-      dores,
-      faltantes,
-      riscos,
-      comentarios,
-      consent,
-      piloto,
-      indiceAderencia,
-      fonte: "IFPE",
-      versaoFormulario: "v1.0",
-      ts: new Date().toISOString(),
-    };
+    const formData = new FormData(e.currentTarget as HTMLFormElement);
+    
+    // Adicionar valores dos campos hidden (calculados)
+    formData.set("aderenciaSetor", String(aderenciaSetor || ''));
+    formData.set("valorPercebido", String(valorPercebido || ''));
+    formData.set("facilidadeUso", String(facilidadeUso || ''));
+    formData.set("prioridade", String(prioridade || ''));
+    formData.set("probAdocao", String(probAdocao));
+    formData.set("geracaoEditais", String(modulos.geracaoEditais));
+    formData.set("verificacaoConformidade", String(modulos.verificacaoConformidade));
+    formData.set("gestaoContratos", String(modulos.gestaoContratos));
+    formData.set("fluxosAprovacao", String(modulos.fluxosAprovacao));
+    formData.set("auditoriaRelatorios", String(modulos.auditoriaRelatorios));
+    formData.set("indiceAderencia", String(indiceAderencia || ''));
+    formData.set("fonte", "Cliente");
+    formData.set("versaoFormulario", "v1.0");
+    formData.set("ts", new Date().toISOString());
 
     setEnviando(true);
     try {
-      const res = await fetch("/api/coleta-satisfacao", {
+      const response = await fetch("https://formspree.io/f/mpwoekvy", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: formData,
+        headers: { "Accept": "application/json" }
       });
 
-      if (res.ok) {
+      if (response.ok) {
         setOkMsg(
           `Obrigado! Sua resposta foi registrada. Índice de Aderência: ${indiceAderencia ?? "-"}`
         );
+        // Resetar formulário após sucesso
+        setTimeout(() => {
+          window.location.reload();
+        }, 3000);
       } else {
-        const blob = new Blob([JSON.stringify(payload, null, 2)], {
-          type: "application/json",
-        });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = `coleta-satisfacao-ifpe-${Date.now()}.json`;
-        a.click();
-        URL.revokeObjectURL(url);
-        setOkMsg(
-          "Não consegui enviar para a API. Fiz o download do JSON com suas respostas."
-        );
+        setErrMsg("Ocorreu um erro ao enviar sua resposta. Tente novamente.");
       }
     } catch (err) {
-      const blob = new Blob([JSON.stringify(payload, null, 2)], {
-        type: "application/json",
-      });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = `coleta-satisfacao-ifpe-${Date.now()}.json`;
-      a.click();
-      URL.revokeObjectURL(url);
-      setErrMsg(
-        "Falha de rede. Baixei um JSON com as respostas para não perder os dados."
-      );
+      setErrMsg("Falha de conexão. Verifique sua internet e tente novamente.");
     } finally {
       setEnviando(false);
     }
@@ -208,7 +187,28 @@ export default function ColetaSatisfacaoPage() {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-8">
+        <form 
+          action="https://formspree.io/f/mpwoekvy"
+          method="POST"
+          onSubmit={handleSubmit} 
+          autoComplete="on"
+          className="space-y-8"
+        >
+          {/* Campos hidden para dados calculados */}
+          <input type="hidden" name="aderenciaSetor" value={aderenciaSetor || ''} />
+          <input type="hidden" name="valorPercebido" value={valorPercebido || ''} />
+          <input type="hidden" name="facilidadeUso" value={facilidadeUso || ''} />
+          <input type="hidden" name="prioridade" value={prioridade || ''} />
+          <input type="hidden" name="probAdocao" value={probAdocao} />
+          <input type="hidden" name="geracaoEditais" value={modulos.geracaoEditais} />
+          <input type="hidden" name="verificacaoConformidade" value={modulos.verificacaoConformidade} />
+          <input type="hidden" name="gestaoContratos" value={modulos.gestaoContratos} />
+          <input type="hidden" name="fluxosAprovacao" value={modulos.fluxosAprovacao} />
+          <input type="hidden" name="auditoriaRelatorios" value={modulos.auditoriaRelatorios} />
+          <input type="hidden" name="indiceAderencia" value={indiceAderencia || ''} />
+          <input type="hidden" name="fonte" value="Cliente" />
+          <input type="hidden" name="versaoFormulario" value="v1.0" />
+          <input type="hidden" name="ts" value={new Date().toISOString()} />
           {/* Identificação */}
           <Card>
             <CardContent className="p-6 space-y-6">
@@ -220,6 +220,7 @@ export default function ColetaSatisfacaoPage() {
               <div className="flex items-center gap-2">
                 <input
                   id="anonimo"
+                  name="anonimo"
                   type="checkbox"
                   checked={anonimo}
                   onChange={(e) => setAnonimo(e.target.checked)}
@@ -236,11 +237,13 @@ export default function ColetaSatisfacaoPage() {
                     <label htmlFor="nome" className="text-sm font-medium">Nome *</label>
                     <input
                       id="nome"
+                      name="nome"
                       type="text"
                       value={nome}
                       onChange={(e) => setNome(e.target.value)}
                       placeholder="Ex.: Marco Eugênio"
                       required
+                      autoComplete="name"
                       className="w-full px-3 py-2 rounded-md border border-border bg-background"
                     />
                   </div>
@@ -249,11 +252,13 @@ export default function ColetaSatisfacaoPage() {
                     <label htmlFor="email" className="text-sm font-medium">E-mail *</label>
                     <input
                       id="email"
+                      name="email"
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="nome@ifpe.edu.br"
                       required
+                      autoComplete="email"
                       className="w-full px-3 py-2 rounded-md border border-border bg-background"
                     />
                   </div>
@@ -262,10 +267,12 @@ export default function ColetaSatisfacaoPage() {
                     <label htmlFor="unidade" className="text-sm font-medium">Unidade/Setor</label>
                     <input
                       id="unidade"
+                      name="unidade"
                       type="text"
                       value={unidade}
                       onChange={(e) => setUnidade(e.target.value)}
                       placeholder="Ex.: Pró-Reitoria"
+                      autoComplete="organization"
                       className="w-full px-3 py-2 rounded-md border border-border bg-background"
                     />
                   </div>
@@ -274,10 +281,12 @@ export default function ColetaSatisfacaoPage() {
                     <label htmlFor="cargo" className="text-sm font-medium">Cargo/Função</label>
                     <input
                       id="cargo"
+                      name="cargo"
                       type="text"
                       value={cargo}
                       onChange={(e) => setCargo(e.target.value)}
                       placeholder="Ex.: Diretor, Analista"
+                      autoComplete="organization-title"
                       className="w-full px-3 py-2 rounded-md border border-border bg-background"
                     />
                   </div>
@@ -322,9 +331,22 @@ export default function ColetaSatisfacaoPage() {
                 required
               />
 
-              <div className="space-y-3">
+              <div className="bg-muted/30 rounded-lg p-4 border border-border">
+                <div className="flex items-center justify-between">
+                  <span className="text-base font-medium">
+                    Índice de Aderência (calculado):
+                  </span>
+                  <Badge variant="secondary" className="text-md">
+                    {indiceAderencia !== null ? `${indiceAderencia}/100` : "—"}
+                  </Badge>
+                </div>
+              </div>
+
+              <br/>
+
+              {/* <div className="space-y-3">
                 <label className="text-base font-medium block">
-                  5) Probabilidade de adoção/recomendação (0–10) *
+                  Probabilidade de adoção/recomendação (0–10) *
                 </label>
                 <input
                   type="range"
@@ -340,18 +362,9 @@ export default function ColetaSatisfacaoPage() {
                   <Badge variant="secondary">{probAdocao}</Badge>
                   <span>10</span>
                 </div>
-              </div>
+              </div> */}
 
-              <div className="bg-muted/30 rounded-lg p-4 border border-border">
-                <div className="flex items-center justify-between">
-                  <span className="text-base font-medium">
-                    Índice de Aderência (calculado):
-                  </span>
-                  <Badge variant="secondary" className="text-lg">
-                    {indiceAderencia !== null ? `${indiceAderencia}/100` : "—"}
-                  </Badge>
-                </div>
-              </div>
+              
             </CardContent>
           </Card>
 
@@ -365,10 +378,12 @@ export default function ColetaSatisfacaoPage() {
 
               {[
                 ["Geração de Editais", "geracaoEditais"],
-                ["Verificação de Conformidade", "verificacaoConformidade"],
-                ["Gestão de Contratos", "gestaoContratos"],
-                ["Fluxos de Aprovação", "fluxosAprovacao"],
-                ["Auditoria & Relatórios", "auditoriaRelatorios"],
+                ["Geração de Contratos", "geracaoContratos"],
+                ["Check-list de Conformidade", "checklistConformidade"],
+                ["Verificação de Conformidade com IA", "verificacaoConformidadeIA"],
+                ["Fluxo de Aprovação Procuradoria", "fluxoAprovacaoProcuradoria"],
+                ["Fluxo de Aprovação Gestor", "fluxoAprovacaoGestor"],
+                ["Relatórios", "relatorios"],
               ].map(([label, key]) => (
                 <div key={key} className="flex items-center justify-between">
                   <label className="text-base">{label}</label>
@@ -402,22 +417,26 @@ export default function ColetaSatisfacaoPage() {
                 <label htmlFor="dores" className="text-sm font-medium">Top 3 dores atuais</label>
                 <textarea
                   id="dores"
+                  name="dores"
                   value={dores}
                   onChange={(e) => setDores(e.target.value)}
                   placeholder="Liste as principais dores e exemplos práticos."
                   rows={3}
+                  autoComplete="off"
                   className="w-full px-3 py-2 rounded-md border border-border bg-background"
                 />
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="faltantes" className="text-sm font-medium">Funcionalidades faltantes (must-have)</label>
+                <label htmlFor="faltantes" className="text-sm font-medium">Funcionalidades mais necessárias (must-have)</label>
                 <textarea
                   id="faltantes"
+                  name="faltantes"
                   value={faltantes}
                   onChange={(e) => setFaltantes(e.target.value)}
                   placeholder="O que não pode faltar para ser adotado?"
                   rows={3}
+                  autoComplete="off"
                   className="w-full px-3 py-2 rounded-md border border-border bg-background"
                 />
               </div>
@@ -426,10 +445,12 @@ export default function ColetaSatisfacaoPage() {
                 <label htmlFor="riscos" className="text-sm font-medium">Riscos/barreiras</label>
                 <textarea
                   id="riscos"
+                  name="riscos"
                   value={riscos}
                   onChange={(e) => setRiscos(e.target.value)}
                   placeholder="Ex.: integração, LGPD, orçamento..."
                   rows={3}
+                  autoComplete="off"
                   className="w-full px-3 py-2 rounded-md border border-border bg-background"
                 />
               </div>
@@ -438,10 +459,12 @@ export default function ColetaSatisfacaoPage() {
                 <label htmlFor="comentarios" className="text-sm font-medium">Comentários gerais</label>
                 <textarea
                   id="comentarios"
+                  name="comentarios"
                   value={comentarios}
                   onChange={(e) => setComentarios(e.target.value)}
                   placeholder="Espaço livre para observações."
                   rows={3}
+                  autoComplete="off"
                   className="w-full px-3 py-2 rounded-md border border-border bg-background"
                 />
               </div>
@@ -449,6 +472,7 @@ export default function ColetaSatisfacaoPage() {
               <div className="flex items-center gap-2">
                 <input
                   id="piloto"
+                  name="piloto"
                   type="checkbox"
                   checked={piloto}
                   onChange={(e) => setPiloto(e.target.checked)}
@@ -469,6 +493,7 @@ export default function ColetaSatisfacaoPage() {
               <div className="flex items-start gap-2">
                 <input
                   id="consent"
+                  name="consent"
                   type="checkbox"
                   checked={consent}
                   onChange={(e) => setConsent(e.target.checked)}

@@ -805,12 +805,14 @@ export default function LandingPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" className="w-full sm:w-auto" asChild>
-              <a href="https://app.observantia.com.br" target="_blank" rel="noopener noreferrer">
-                Solicitar demonstração
+              <a href="/coleta-satisfacao" target="_blank" rel="noopener noreferrer">
+                Fornecer feedback
               </a>
             </Button>
             <Button size="lg" variant="outline" className="w-full sm:w-auto bg-transparent">
-              Falar com a equipe
+              <a href="https://app.observantia.com.br" target="_blank" rel="noopener noreferrer">
+                Solicitar demonstração
+              </a>
             </Button>
           </div>
         </div>
