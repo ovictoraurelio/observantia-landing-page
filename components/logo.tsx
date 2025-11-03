@@ -43,13 +43,13 @@ export function Logo({ className, showTagline = false, size = "md", variant = "t
         className={cn(textSizeClasses[size])}
         style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
       >
-        <span style={{ fontWeight: 600, color: "#FFFFFF" }}>OBSERVANT</span>
+        <span style={{ fontWeight: 600, color: "#0E0A1A" }}>OBSERVANT</span>
         <span style={{ fontWeight: 800, color: "#E94E2E" }}>IA</span>
       </div>
       {showTagline && (
         <div 
           style={{ 
-            color: "#BDBDBD", 
+            color: "#0E0A1A", 
             fontSize: "12px", 
             letterSpacing: "2px",
             fontWeight: 300,

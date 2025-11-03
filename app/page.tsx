@@ -50,7 +50,7 @@ export default function LandingPage() {
             Da demanda por contratação à publicação, em tempo recorde
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 text-pretty max-w-2xl mx-auto leading-relaxed">
-            Plataforma open source para organizar a esteira de elaboração de Editais e Contratos com checklists inteligentes e trilha de auditoria, promovendo transparência e conformidade.
+            Plataforma open source para organizar a esteira de elaboração de Editais e Contratos com checklists inteligentes e trilha de auditoria, promovendo eficiência e conformidade.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" className="w-full sm:w-auto">
@@ -535,79 +535,100 @@ export default function LandingPage() {
             </CardContent>
           </Card>
 
-          {/* Marco Eugênio */}
+          {/* Lucas Victor */}
           <Card className="border-border hover:border-primary/50 transition-colors">
             <CardContent className="p-6 text-center">
               <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
                 <Image
-                  src="https://ui-avatars.com/api/?name=Marco+Eugenio&size=96&background=random"
-                  alt="Marco Eugênio"
+                  src="https://ui-avatars.com/api/?name=Lucas+Victor&size=96&background=random"
+                  alt="Lucas Victor"
                   width={96}
                   height={96}
                   className="rounded-full"
                 />
               </div>
-              <h3 className="text-xl font-semibold mb-1">Prof. Msc. Marco Eugênio</h3>
-              <p className="text-sm text-muted-foreground mb-3">Cliente e Especialista</p>
+              <h3 className="text-xl font-semibold mb-1">Lucas Victor</h3>
+              <p className="text-sm text-muted-foreground mb-3">Analista de Negócios</p>
               <div className="flex items-center justify-center gap-2">
                 <a
-                  href="mailto:maea@cin.ufpe.br"
+                  href="mailto:lvs4@cin.ufpe.br"
                   className="w-8 h-8 bg-muted hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors"
-                  aria-label="Email Marco Eugênio"
+                  aria-label="Email Lucas Victor"
                 >
                   <Mail className="w-4 h-4" />
                 </a>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Alexandre Vasconcelos */}
-          <Card className="border-border hover:border-primary/50 transition-colors">
-            <CardContent className="p-6 text-center">
-              <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                <Image
-                  src="https://ui-avatars.com/api/?name=Alexandre+Vasconcelos&size=96&background=random"
-                  alt="Alexandre Vasconcelos"
-                  width={96}
-                  height={96}
-                  className="rounded-full"
-                />
-              </div>
-              <h3 className="text-xl font-semibold mb-1">Prof. Dr. Alexandre Vasconcelos</h3>
-              <p className="text-sm text-muted-foreground mb-3">Orientador</p>
-              <div className="flex items-center justify-center gap-2">
-                <a
-                  href="mailto:amlv@cin.ufpe.br"
-                  className="w-8 h-8 bg-muted hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors"
-                  aria-label="Email Alexandre Vasconcelos"
-                >
-                  <Mail className="w-4 h-4" />
-                </a>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Jéssyka Vilela */}
-          <Card className="border-border hover:border-primary/50 transition-colors">
-            <CardContent className="p-6 text-center">
-              <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                <Image
-                  src="https://ui-avatars.com/api/?name=Jessyka+Vilela&size=96&background=random"
-                  alt="Jéssyka Vilela"
-                  width={96}
-                  height={96}
-                  className="rounded-full"
-                />
-              </div>
-              <h3 className="text-xl font-semibold mb-1">Profª Drª Jéssyka Vilela</h3>
-              <p className="text-sm text-muted-foreground mb-3">Orientadora</p>
-              <div className="flex items-center justify-center gap-2">
                 <a
                   href="#"
                   className="w-8 h-8 bg-muted hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors"
-                  aria-label="Email Jéssyka Vilela"
+                  aria-label="GitHub Lucas Victor"
+                >
+                  <Github className="w-4 h-4" />
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Jadson Abreu */}
+          <Card className="border-border hover:border-primary/50 transition-colors">
+            <CardContent className="p-6 text-center">
+              <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                <Image
+                  src="https://ui-avatars.com/api/?name=Jadson+Abreu&size=96&background=random"
+                  alt="Jadson Abreu"
+                  width={96}
+                  height={96}
+                  className="rounded-full"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-1">Jadson Abreu</h3>
+              <p className="text-sm text-muted-foreground mb-3">UI Designer</p>
+              <div className="flex items-center justify-center gap-2">
+                <a
+                  href="mailto:jaas@cin.ufpe.br"
+                  className="w-8 h-8 bg-muted hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors"
+                  aria-label="Email Jadson Abreu"
                 >
                   <Mail className="w-4 h-4" />
+                </a>
+                <a
+                  href="#"
+                  className="w-8 h-8 bg-muted hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors"
+                  aria-label="GitHub Jadson Abreu"
+                >
+                  <Github className="w-4 h-4" />
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Raian Limeira */}
+          <Card className="border-border hover:border-primary/50 transition-colors">
+            <CardContent className="p-6 text-center">
+              <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                <Image
+                  src="https://ui-avatars.com/api/?name=Raian+Limeira&size=96&background=random"
+                  alt="Raian Limeira"
+                  width={96}
+                  height={96}
+                  className="rounded-full"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-1">Raian Limeira</h3>
+              <p className="text-sm text-muted-foreground mb-3">UX Designer</p>
+              <div className="flex items-center justify-center gap-2">
+                <a
+                  href="mailto:raian.limeira@ufpe.br"
+                  className="w-8 h-8 bg-muted hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors"
+                  aria-label="Email Raian Limeira"
+                >
+                  <Mail className="w-4 h-4" />
+                </a>
+                <a
+                  href="#"
+                  className="w-8 h-8 bg-muted hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors"
+                  aria-label="GitHub Raian Limeira"
+                >
+                  <Github className="w-4 h-4" />
                 </a>
               </div>
             </CardContent>
