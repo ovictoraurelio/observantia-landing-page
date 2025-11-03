@@ -1,10 +1,15 @@
+"use client"
+
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowLeft, FileText, ExternalLink, Download, Eye } from "lucide-react"
+import { Dialog, DialogContent } from "@/components/ui/dialog"
+import { ArrowLeft, FileText, ExternalLink, Download, Eye, X } from "lucide-react"
 import Link from "next/link"
 
 export default function StatusReport1Page() {
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null)
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -317,11 +322,17 @@ export default function StatusReport1Page() {
                   </div>
 
                   <div className="flex gap-2">
-                    <Button size="sm" variant="outline" className="flex-1">
-                      <Download className="w-4 h-4 mr-2" />
-                      Baixar PDF
+                    <Button size="sm" variant="outline" className="flex-1" asChild>
+                      <a href="/entregaveis/MatrizCSD.png" download>
+                        <Download className="w-4 h-4 mr-2" />
+                        Baixar arquivo
+                      </a>
                     </Button>
-                    <Button size="sm" className="flex-1">
+                    <Button 
+                      size="sm" 
+                      className="flex-1"
+                      onClick={() => setSelectedImage({ src: "/entregaveis/MatrizCSD.png", alt: "Matriz CSD - Customer Scenario Discovery" })}
+                    >
                       <Eye className="w-4 h-4 mr-2" />
                       Ampliar
                     </Button>
@@ -359,11 +370,17 @@ export default function StatusReport1Page() {
                   </div>
 
                   <div className="flex gap-2">
-                    <Button size="sm" variant="outline" className="flex-1">
-                      <Download className="w-4 h-4 mr-2" />
-                      Baixar PDF
+                    <Button size="sm" variant="outline" className="flex-1" asChild>
+                      <a href="/entregaveis/MatrizSIPOC.png" download>
+                        <Download className="w-4 h-4 mr-2" />
+                        Baixar arquivo
+                      </a>
                     </Button>
-                    <Button size="sm" className="flex-1">
+                    <Button 
+                      size="sm" 
+                      className="flex-1"
+                      onClick={() => setSelectedImage({ src: "/entregaveis/MatrizSIPOC.png", alt: "Matriz SIPOC - Supplier, Input, Process, Output, Customer" })}
+                    >
                       <Eye className="w-4 h-4 mr-2" />
                       Ampliar
                     </Button>
@@ -437,11 +454,17 @@ export default function StatusReport1Page() {
                 </div>
 
                 <div className="flex gap-2 pt-4">
-                  <Button size="sm" variant="outline" className="flex-1">
-                    <Download className="w-4 h-4 mr-2" />
-                    Baixar Fluxo
+                  <Button size="sm" variant="outline" className="flex-1" asChild>
+                    <a href="/entregaveis/fluxo-as-is.svg" download>
+                      <Download className="w-4 h-4 mr-2" />
+                      Baixar arquivo
+                    </a>
                   </Button>
-                  <Button size="sm" className="flex-1">
+                  <Button 
+                    size="sm" 
+                    className="flex-1"
+                    onClick={() => setSelectedImage({ src: "/entregaveis/fluxo-as-is.svg", alt: "Fluxo AS-IS - Processo atual de gestão de editais e contratos" })}
+                  >
                     <Eye className="w-4 h-4 mr-2" />
                     Ampliar
                   </Button>
@@ -516,6 +539,30 @@ export default function StatusReport1Page() {
           </Card>
         </div>
       </section>
+
+      {/* Dialog para visualização fullscreen */}
+      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+        <DialogContent className="max-w-[95vw] max-h-[95vh] w-full h-full p-0 overflow-auto">
+          <div className="relative w-full h-full">
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-background/80 backdrop-blur-sm border border-border flex items-center justify-center hover:bg-background transition-colors"
+              aria-label="Fechar"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            {selectedImage && (
+              <div className="p-8 flex items-center justify-center min-h-full">
+                <img
+                  src={selectedImage.src}
+                  alt={selectedImage.alt}
+                  className="max-w-full h-auto object-contain"
+                />
+              </div>
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   )
 }
