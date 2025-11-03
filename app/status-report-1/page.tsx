@@ -125,6 +125,31 @@ export default function StatusReport1Page() {
                 </CardContent>
               </Card>
 
+              {/* Fluxo AS-IS */}
+              <Card className="border-border hover:border-primary/50 transition-colors">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <FileText className="w-6 h-6 text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-semibold mb-2">Fluxo AS-IS</h3>
+                      <p className="text-sm text-muted-foreground mb-4">
+                        Mapeamento do processo atual de gestão de editais e contratos no IFPE.
+                      </p>
+                      <div className="flex gap-2">
+                        <Button size="sm" variant="outline" asChild>
+                          <a href="#fluxo-as-is">
+                            <ExternalLink className="w-4 h-4 mr-2" />
+                            Visualizar Fluxo
+                          </a>
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
               {/* Arquitetura */}
               <Card className="border-border hover:border-primary/50 transition-colors">
                 <CardContent className="p-6">
@@ -248,6 +273,208 @@ export default function StatusReport1Page() {
             </CardContent>
           </Card>
 
+          
+        </div>
+      </section>
+
+      {/* Matrizes - Visualização */}
+      <section id="matrizes-visualizacao" className="container mx-auto px-4 py-12 md:py-16">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Matrizes de Análise</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Visualização das matrizes CSD e SPIOC desenvolvidas para análise detalhada dos processos e cenários do cliente.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Matriz CSD */}
+            <Card className="border-border">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <FileText className="w-5 h-5 text-primary" />
+                  Matriz CSD - Customer Scenario Discovery
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <p className="text-sm text-muted-foreground">
+                    Mapeamento completo dos cenários do cliente, identificando dores, necessidades e oportunidades de melhoria no processo atual.
+                  </p>
+                  
+                  <div className="bg-muted/30 rounded-lg p-4 border border-border">
+                    <div className="space-y-3">
+                      <img 
+                        src="/matriz-csd.png" 
+                        alt="Matriz CSD - Customer Scenario Discovery"
+                        className="w-full h-auto rounded-lg border border-border/50"
+                      />
+                      <div className="text-center">
+                        <h4 className="font-semibold">Matriz CSD</h4>
+                        <p className="text-sm text-muted-foreground">Análise de Cenários do Cliente</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-2">
+                    <Button size="sm" variant="outline" className="flex-1">
+                      <Download className="w-4 h-4 mr-2" />
+                      Baixar PDF
+                    </Button>
+                    <Button size="sm" className="flex-1">
+                      <Eye className="w-4 h-4 mr-2" />
+                      Ampliar
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Matriz SPIOC */}
+            <Card className="border-border">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <FileText className="w-5 h-5 text-accent" />
+                  Matriz SPIOC - Stakeholder, Process, Input, Output, Control
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <p className="text-sm text-muted-foreground">
+                    Análise detalhada dos stakeholders, processos, entradas, saídas e controles para compreensão completa do ecossistema do projeto.
+                  </p>
+                  
+                  <div className="bg-muted/30 rounded-lg p-4 border border-border">
+                    <div className="space-y-3">
+                      <img 
+                        src="/matriz-spioc.png" 
+                        alt="Matriz SPIOC - Stakeholder, Process, Input, Output, Control"
+                        className="w-full h-auto rounded-lg border border-border/50"
+                      />
+                      <div className="text-center">
+                        <h4 className="font-semibold">Matriz SPIOC</h4>
+                        <p className="text-sm text-muted-foreground">Análise de Processos e Stakeholders</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-2">
+                    <Button size="sm" variant="outline" className="flex-1">
+                      <Download className="w-4 h-4 mr-2" />
+                      Baixar PDF
+                    </Button>
+                    <Button size="sm" className="flex-1">
+                      <Eye className="w-4 h-4 mr-2" />
+                      Ampliar
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-8 text-center">
+            <p className="text-sm text-muted-foreground">
+              As matrizes estão disponíveis para download e análise detalhada. Elas formam a base para o desenvolvimento das funcionalidades do ObservantIA.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Fluxo AS-IS - Visualização */}
+      <section id="fluxo-as-is" className="container mx-auto px-4 py-12 md:py-16 bg-muted/20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Fluxo AS-IS</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Mapeamento detalhado do processo atual de gestão de editais e contratos no IFPE, 
+              identificando pontos de melhoria e oportunidades para otimização.
+            </p>
+          </div>
+
+          <Card className="border-border">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <FileText className="w-5 h-5 text-primary" />
+                Processo Atual - Gestão de Editais e Contratos
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-6">
+                <div className="bg-background rounded-lg p-6 border border-border">
+                  <img 
+                    src="/fluxo-as-is.png" 
+                    alt="Fluxo AS-IS - Processo atual de gestão de editais e contratos"
+                    className="w-full h-auto rounded-lg border border-border/50"
+                  />
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="bg-primary/5 rounded-lg p-4 border border-primary/20">
+                    <h4 className="font-semibold text-primary mb-2">Identificados</h4>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                      <li>• 12 etapas principais</li>
+                      <li>• 8 pontos de gargalo</li>
+                      <li>• 15 stakeholders envolvidos</li>
+                    </ul>
+                  </div>
+                  <div className="bg-accent/5 rounded-lg p-4 border border-accent/20">
+                    <h4 className="font-semibold text-accent mb-2">Principais Dores</h4>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                      <li>• Processo manual</li>
+                      <li>• Falta de padronização</li>
+                      <li>• Dificuldade de rastreabilidade</li>
+                    </ul>
+                  </div>
+                  <div className="bg-muted/50 rounded-lg p-4 border border-border">
+                    <h4 className="font-semibold mb-2">Oportunidades</h4>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                      <li>• Automação de etapas</li>
+                      <li>• Centralização de informações</li>
+                      <li>• Melhoria na auditoria</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="flex gap-2 pt-4">
+                  <Button size="sm" variant="outline" className="flex-1">
+                    <Download className="w-4 h-4 mr-2" />
+                    Baixar Fluxo
+                  </Button>
+                  <Button size="sm" className="flex-1">
+                    <Eye className="w-4 h-4 mr-2" />
+                    Ampliar
+                  </Button>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="container mx-auto px-4 py-12 md:py-16">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Dúvidas ou sugestões?</h2>
+          <p className="text-muted-foreground mb-6">
+            Entre em contato com a equipe do ObservantIA para mais informações sobre o projeto.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button size="lg" asChild>
+              <Link href="/#equipe">Falar com a equipe</Link>
+            </Button>
+            <Button size="lg" variant="outline" asChild>
+              <a href="https://github.com/observantia/cin-ufpe" target="_blank" rel="noopener noreferrer">
+                Ver no GitHub
+              </a>
+            </Button>
+          </div>
+        </div>
+        
+      </section>
+
+      <section className="container mx-auto px-4 py-12 md:py-16">
+        <div className="max-w-6xl mx-auto text-left">
           {/* Próximos Passos */}
           <Card className="border-border bg-accent/5">
             <CardHeader>
@@ -287,122 +514,6 @@ export default function StatusReport1Page() {
               </ul>
             </CardContent>
           </Card>
-        </div>
-      </section>
-
-      {/* Matrizes - Visualização */}
-      <section id="matrizes-visualizacao" className="container mx-auto px-4 py-12 md:py-16">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Matrizes de Análise</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Visualização das matrizes CSD e SPIOC desenvolvidas para análise detalhada dos processos e cenários do cliente.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-8">
-            {/* Matriz CSD */}
-            <Card className="border-border">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <FileText className="w-5 h-5 text-primary" />
-                  Matriz CSD - Customer Scenario Discovery
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <p className="text-sm text-muted-foreground">
-                    Mapeamento completo dos cenários do cliente, identificando dores, necessidades e oportunidades de melhoria no processo atual.
-                  </p>
-                  
-                  <div className="bg-muted/30 rounded-lg p-6 border border-border">
-                    <div className="text-center space-y-2">
-                      <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                        <FileText className="w-8 h-8 text-primary" />
-                      </div>
-                      <h4 className="font-semibold">Matriz CSD</h4>
-                      <p className="text-sm text-muted-foreground">Análise de Cenários do Cliente</p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-2">
-                    <Button size="sm" variant="outline" className="flex-1">
-                      <Download className="w-4 h-4 mr-2" />
-                      Baixar PDF
-                    </Button>
-                    <Button size="sm" className="flex-1">
-                      <Eye className="w-4 h-4 mr-2" />
-                      Ampliar
-                    </Button>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Matriz SPIOC */}
-            <Card className="border-border">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <FileText className="w-5 h-5 text-accent" />
-                  Matriz SPIOC - Stakeholder, Process, Input, Output, Control
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <p className="text-sm text-muted-foreground">
-                    Análise detalhada dos stakeholders, processos, entradas, saídas e controles para compreensão completa do ecossistema do projeto.
-                  </p>
-                  
-                  <div className="bg-muted/30 rounded-lg p-6 border border-border">
-                    <div className="text-center space-y-2">
-                      <div className="w-16 h-16 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                        <FileText className="w-8 h-8 text-accent" />
-                      </div>
-                      <h4 className="font-semibold">Matriz SPIOC</h4>
-                      <p className="text-sm text-muted-foreground">Análise de Processos e Stakeholders</p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-2">
-                    <Button size="sm" variant="outline" className="flex-1">
-                      <Download className="w-4 h-4 mr-2" />
-                      Baixar PDF
-                    </Button>
-                    <Button size="sm" className="flex-1">
-                      <Eye className="w-4 h-4 mr-2" />
-                      Ampliar
-                    </Button>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="mt-8 text-center">
-            <p className="text-sm text-muted-foreground">
-              As matrizes estão disponíveis para download e análise detalhada. Elas formam a base para o desenvolvimento das funcionalidades do ObservantIA.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="container mx-auto px-4 py-12 md:py-16">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Dúvidas ou sugestões?</h2>
-          <p className="text-muted-foreground mb-6">
-            Entre em contato com a equipe do ObservantIA para mais informações sobre o projeto.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" asChild>
-              <Link href="/#equipe">Falar com a equipe</Link>
-            </Button>
-            <Button size="lg" variant="outline" asChild>
-              <a href="https://github.com/observantia/cin-ufpe" target="_blank" rel="noopener noreferrer">
-                Ver no GitHub
-              </a>
-            </Button>
-          </div>
         </div>
       </section>
     </div>
