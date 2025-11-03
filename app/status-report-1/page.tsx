@@ -27,11 +27,11 @@ export default function StatusReport1Page() {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-balance">Status Report 1</h1>
           <p className="text-lg text-muted-foreground mb-6 text-pretty leading-relaxed">
-            Primeira entrega do projeto ObservantIA - Documentação completa e artefatos desenvolvidos
+            Primeira entrega do projeto ObservantIA - Documentação e artefatos desenvolvidos
           </p>
           <div className="flex items-center justify-center gap-4">
-            <Badge variant="outline">Janeiro 2025</Badge>
-            <Badge variant="outline">Fase MVP</Badge>
+            <Badge variant="outline">Novembro 2025</Badge>
+            <Badge variant="outline">Status Report 1</Badge>
           </div>
         </div>
       </section>

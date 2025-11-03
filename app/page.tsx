@@ -40,13 +40,13 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 md:py-32">
         <div className="max-w-4xl mx-auto text-center">
-          <Badge variant="secondary" className="mb-6">
+          {/* <Badge variant="secondary" className="mb-6">
             <span className="w-2 h-2 bg-accent rounded-full mr-2 animate-pulse" />
             Fase MVP - T=0 em desenvolvimento
-          </Badge>
+          </Badge> */}
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance leading-tight">
             {/* Gestão inteligente de Editais e Contratos */}
-            Da demanda à publicação, em tempo recorde
+            Da demanda por contratação à publicação, em tempo recorde
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 text-pretty max-w-2xl mx-auto leading-relaxed">
             Plataforma open source para organizar a esteira de elaboração de Editais e Contratos com checklists inteligentes e trilha de auditoria, promovendo transparência e conformidade.
@@ -403,7 +403,7 @@ export default function LandingPage() {
           <h3 className="text-xl font-semibold mb-4 text-center">Roadmap de Evolução</h3>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h4 className="font-semibold mb-2 text-primary">✅ Fase Atual (T=0)</h4>
+              <h4 className="font-semibold mb-2 text-primary">✅ MVP entregável</h4>
               <ul className="space-y-1 text-sm text-muted-foreground">
                 <li>• Gestão de demandas e documentos</li>
                 <li>• Fluxo de aprovação multi-nível</li>
@@ -426,7 +426,7 @@ export default function LandingPage() {
 
       <section id="equipe" className="container mx-auto px-4 py-20 md:py-32">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">Equipe de Desenvolvimento</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">Equipe de Responsável</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
             Profissionais dedicados ao desenvolvimento da plataforma ObservantIA
           </p>
