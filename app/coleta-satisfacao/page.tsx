@@ -525,7 +525,7 @@ export default function ColetaSatisfacaoPage() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <Logo size="sm" showTagline />
             <div className="text-sm text-muted-foreground text-center">
-              <p>© 2025 ObservantIA - IFPE.</p>
+              <p>© 2025 ObservantIA - Grupo 1.</p>
             </div>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Mail className="w-4 h-4" />

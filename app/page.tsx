@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { FileText, CheckCircle2, Users, BarChart3, Shield, GitBranch, Clock, Github, Mail } from "lucide-react"
 import { Logo } from "@/components/logo"
+import Image from "next/image"
 
 export default function LandingPage() {
   return (
@@ -426,17 +427,24 @@ export default function LandingPage() {
 
       <section id="equipe" className="container mx-auto px-4 py-20 md:py-32">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">Equipe de Responsável</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">Equipe Responsável</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
             Profissionais dedicados ao desenvolvimento da plataforma ObservantIA
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {/* Victor Aurélio */}
           <Card className="border-border hover:border-primary/50 transition-colors">
             <CardContent className="p-6 text-center">
-              <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <div className="text-3xl font-bold text-primary">VA</div>
+              <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                <Image
+                  src="https://ui-avatars.com/api/?name=Victor+Aurelio&size=96&background=random"
+                  alt="Victor Aurélio"
+                  width={96}
+                  height={96}
+                  className="rounded-full"
+                />
               </div>
               <h3 className="text-xl font-semibold mb-1">Victor Aurélio</h3>
               <p className="text-sm text-muted-foreground mb-3">Gestor de Projeto</p>
@@ -461,10 +469,17 @@ export default function LandingPage() {
             </CardContent>
           </Card>
 
+          {/* André Campos */}
           <Card className="border-border hover:border-primary/50 transition-colors">
             <CardContent className="p-6 text-center">
-              <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <div className="text-3xl font-bold text-primary">AC</div>
+              <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                <Image
+                  src="https://ui-avatars.com/api/?name=Andre+Campos&size=96&background=random"
+                  alt="André Campos"
+                  width={96}
+                  height={96}
+                  className="rounded-full"
+                />
               </div>
               <h3 className="text-xl font-semibold mb-1">André Campos</h3>
               <p className="text-sm text-muted-foreground mb-3">Desenvolvedor Backend</p>
@@ -487,10 +502,17 @@ export default function LandingPage() {
             </CardContent>
           </Card>
 
+          {/* Alandrey Alves */}
           <Card className="border-border hover:border-primary/50 transition-colors">
             <CardContent className="p-6 text-center">
-              <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <div className="text-3xl font-bold text-primary">AA</div>
+              <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                <Image
+                  src="https://ui-avatars.com/api/?name=Alandrey+Alves&size=96&background=random"
+                  alt="Alandrey Alves"
+                  width={96}
+                  height={96}
+                  className="rounded-full"
+                />
               </div>
               <h3 className="text-xl font-semibold mb-1">Alandrey Alves</h3>
               <p className="text-sm text-muted-foreground mb-3">Desenvolvedor Frontend</p>
@@ -508,6 +530,84 @@ export default function LandingPage() {
                   aria-label="GitHub Alandrey Alves"
                 >
                   <Github className="w-4 h-4" />
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Marco Eugênio */}
+          <Card className="border-border hover:border-primary/50 transition-colors">
+            <CardContent className="p-6 text-center">
+              <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                <Image
+                  src="https://ui-avatars.com/api/?name=Marco+Eugenio&size=96&background=random"
+                  alt="Marco Eugênio"
+                  width={96}
+                  height={96}
+                  className="rounded-full"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-1">Prof. Msc. Marco Eugênio</h3>
+              <p className="text-sm text-muted-foreground mb-3">Cliente e Especialista</p>
+              <div className="flex items-center justify-center gap-2">
+                <a
+                  href="mailto:maea@cin.ufpe.br"
+                  className="w-8 h-8 bg-muted hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors"
+                  aria-label="Email Marco Eugênio"
+                >
+                  <Mail className="w-4 h-4" />
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Alexandre Vasconcelos */}
+          <Card className="border-border hover:border-primary/50 transition-colors">
+            <CardContent className="p-6 text-center">
+              <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                <Image
+                  src="https://ui-avatars.com/api/?name=Alexandre+Vasconcelos&size=96&background=random"
+                  alt="Alexandre Vasconcelos"
+                  width={96}
+                  height={96}
+                  className="rounded-full"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-1">Prof. Dr. Alexandre Vasconcelos</h3>
+              <p className="text-sm text-muted-foreground mb-3">Orientador</p>
+              <div className="flex items-center justify-center gap-2">
+                <a
+                  href="mailto:amlv@cin.ufpe.br"
+                  className="w-8 h-8 bg-muted hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors"
+                  aria-label="Email Alexandre Vasconcelos"
+                >
+                  <Mail className="w-4 h-4" />
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Jéssyka Vilela */}
+          <Card className="border-border hover:border-primary/50 transition-colors">
+            <CardContent className="p-6 text-center">
+              <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                <Image
+                  src="https://ui-avatars.com/api/?name=Jessyka+Vilela&size=96&background=random"
+                  alt="Jéssyka Vilela"
+                  width={96}
+                  height={96}
+                  className="rounded-full"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-1">Profª Drª Jéssyka Vilela</h3>
+              <p className="text-sm text-muted-foreground mb-3">Orientadora</p>
+              <div className="flex items-center justify-center gap-2">
+                <a
+                  href="#"
+                  className="w-8 h-8 bg-muted hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors"
+                  aria-label="Email Jéssyka Vilela"
+                >
+                  <Mail className="w-4 h-4" />
                 </a>
               </div>
             </CardContent>
@@ -540,11 +640,11 @@ export default function LandingPage() {
                     Especialista em gestão administrativa e processos de contratação pública no IFPE
                   </p>
                   <a
-                    href="mailto:maea@cin.ufpe.br"
+                    href="#"
                     className="inline-flex items-center gap-2 text-sm text-primary hover:text-accent transition-colors"
                   >
                     <Mail className="w-4 h-4" />
-                    maea@cin.ufpe.br
+                    Contato disponível em breve
                   </a>
                 </div>
               </CardContent>
@@ -602,11 +702,11 @@ export default function LandingPage() {
                   Especialista em Engenharia de Software, Gestão de Processos de Negócio e Planejamento de Projetos
                 </p>
                 <a
-                  href="mailto:amlv@cin.ufpe.br"
+                  href="#"
                   className="inline-flex items-center gap-2 text-sm text-primary hover:text-accent transition-colors"
                 >
                   <Mail className="w-4 h-4" />
-                  amlv@cin.ufpe.br
+                  Contato disponível em breve
                 </a>
               </div>
             </CardContent>
