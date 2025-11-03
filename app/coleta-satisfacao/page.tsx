@@ -56,10 +56,10 @@ export default function ColetaSatisfacaoPage() {
     const to100 = (x: number) => x * 20;
     const score =
       0.30 * to100(aderenciaSetor) +
-      0.25 * to100(valorPercebido) +
+      0.30 * to100(valorPercebido) +
       0.20 * to100(facilidadeUso) +
-      0.15 * to100(prioridade) +
-      0.10 * (probAdocao * 10);
+      0.20 * to100(prioridade);
+      // 0.10 * (probAdocao * 10);
     return Math.round(score);
   }, [aderenciaSetor, valorPercebido, facilidadeUso, prioridade, probAdocao]);
 
@@ -125,10 +125,13 @@ export default function ColetaSatisfacaoPage() {
     formData.set("prioridade", String(prioridade || ''));
     formData.set("probAdocao", String(probAdocao));
     formData.set("geracaoEditais", String(modulos.geracaoEditais));
+    formData.set("geracaoContratos", String(modulos.geracaoContratos));
     formData.set("verificacaoConformidade", String(modulos.verificacaoConformidade));
-    formData.set("gestaoContratos", String(modulos.gestaoContratos));
-    formData.set("fluxosAprovacao", String(modulos.fluxosAprovacao));
-    formData.set("auditoriaRelatorios", String(modulos.auditoriaRelatorios));
+    formData.set("checklistConformidade", String(modulos.checklistConformidade));
+    formData.set("verificacaoConformidadeIA", String(modulos.verificacaoConformidadeIA));
+    formData.set("fluxoAprovacaoProcuradoria", String(modulos.fluxoAprovacaoProcuradoria));
+    formData.set("fluxoAprovacaoGestor", String(modulos.fluxoAprovacaoGestor));
+    formData.set("relatorios", String(modulos.relatorios));
     formData.set("indiceAderencia", String(indiceAderencia || ''));
     formData.set("fonte", "Cliente");
     formData.set("versaoFormulario", "v1.0");
@@ -200,11 +203,14 @@ export default function ColetaSatisfacaoPage() {
           <input type="hidden" name="facilidadeUso" value={facilidadeUso || ''} />
           <input type="hidden" name="prioridade" value={prioridade || ''} />
           <input type="hidden" name="probAdocao" value={probAdocao} />
-          <input type="hidden" name="geracaoEditais" value={modulos.geracaoEditais} />
-          <input type="hidden" name="verificacaoConformidade" value={modulos.verificacaoConformidade} />
-          <input type="hidden" name="gestaoContratos" value={modulos.gestaoContratos} />
-          <input type="hidden" name="fluxosAprovacao" value={modulos.fluxosAprovacao} />
-          <input type="hidden" name="auditoriaRelatorios" value={modulos.auditoriaRelatorios} />
+          <input type="hidden" name="geracaoEditais" value={String(modulos.geracaoEditais)} />
+          <input type="hidden" name="geracaoContratos" value={String(modulos.geracaoContratos)} />
+          <input type="hidden" name="verificacaoConformidade" value={String(modulos.verificacaoConformidade)} />
+          <input type="hidden" name="checklistConformidade" value={String(modulos.checklistConformidade)} />
+          <input type="hidden" name="verificacaoConformidadeIA" value={String(modulos.verificacaoConformidadeIA)} />
+          <input type="hidden" name="fluxoAprovacaoProcuradoria" value={String(modulos.fluxoAprovacaoProcuradoria)} />
+          <input type="hidden" name="fluxoAprovacaoGestor" value={String(modulos.fluxoAprovacaoGestor)} />
+          <input type="hidden" name="relatorios" value={String(modulos.relatorios)} />
           <input type="hidden" name="indiceAderencia" value={indiceAderencia || ''} />
           <input type="hidden" name="fonte" value="Cliente" />
           <input type="hidden" name="versaoFormulario" value="v1.0" />
