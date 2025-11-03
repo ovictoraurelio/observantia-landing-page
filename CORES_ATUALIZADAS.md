@@ -15,24 +15,24 @@
 ## Cores Principais:
 
 ### Light Mode (:root)
-```css
+\`\`\`css
 --primary: oklch(0.55 0.22 25);        /* Vermelho OBSERVANTIA */
 --accent: oklch(0.55 0.22 25);         /* Vermelho OBSERVANTIA */
 --background: oklch(0.99 0 0);         /* Branco quase puro */
 --foreground: oklch(0.18 0 0);         /* Preto suave */
 --border: oklch(0.9 0.005 0);          /* Cinza claro neutro */
 --muted: oklch(0.96 0.005 0);          /* Cinza muito claro */
-```
+\`\`\`
 
 ### Dark Mode (.dark)
-```css
+\`\`\`css
 --background: #0E0A1A;                 /* Roxo escuro OBSERVANTIA */
 --primary: oklch(0.58 0.22 25);        /* Vermelho mais claro */
 --accent: oklch(0.58 0.22 25);         /* Vermelho mais claro */
 --foreground: oklch(0.97 0 0);         /* Branco quase puro */
 --border: oklch(0.25 0.02 0);          /* Cinza escuro neutro */
 --card: oklch(0.18 0.01 0);            /* Cinza muito escuro */
-```
+\`\`\`
 
 ## Esquema de Cores OKLCH:
 

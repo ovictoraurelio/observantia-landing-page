@@ -7,9 +7,9 @@ A imagem do logo que você enviou precisa ser salva no projeto:
 1. **Abra a imagem do logo** que você enviou no chat
 2. **Clique com botão direito** na imagem → "Salvar imagem como..."
 3. **Salve no caminho**: 
-   ```
+   \`\`\`
    /Users/wozniak/projects/ovictoraurelio/observantia-landing-page/public/logo-observantia-source.png
-   ```
+   \`\`\`
 4. **Nome do arquivo**: `logo-observantia-source.png`
 
 ## Passo 2: Executar Script de Otimização
@@ -18,13 +18,13 @@ Vou instalar o Sharp e executar o script para criar todas as versões otimizadas
 
 Execute os comandos abaixo em sequência:
 
-```bash
+\`\`\`bash
 # 1. Instalar Sharp (biblioteca de processamento de imagens)
 pnpm add -D sharp
 
 # 2. Executar script de otimização
 node scripts/optimize-logo.js
-```
+\`\`\`
 
 ## O que será criado automaticamente:
 
@@ -38,19 +38,19 @@ node scripts/optimize-logo.js
 ## Passo 3: Criar Favicon.ico (Opcional)
 
 Se você tiver ImageMagick instalado:
-```bash
+\`\`\`bash
 cd public
 convert favicon-32.png favicon-16.png favicon.ico
 cd ..
-```
+\`\`\`
 
 Ou use este site: https://www.favicon-generator.org/
 
 ## Passo 4: Iniciar o servidor e testar
 
-```bash
+\`\`\`bash
 pnpm dev
-```
+\`\`\`
 
 Acesse http://localhost:3000 para ver o logo funcionando!
 

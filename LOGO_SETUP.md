@@ -49,7 +49,7 @@ Create these optimized versions from the official logo:
 
 If you have ImageMagick installed, use these commands to create optimized versions:
 
-```bash
+\`\`\`bash
 # Navigate to public folder
 cd public
 
@@ -66,7 +66,7 @@ convert logo-observantia.png -resize 1200x630 -gravity center -extent 1200x630 o
 
 # Create small version
 convert logo-observantia.png -resize 400x180 logo-observantia-sm.png
-```
+\`\`\`
 
 ### 4. Alternative: Online Tools
 
@@ -79,7 +79,7 @@ Use these online tools to create optimized versions:
 
 The Logo component supports both image and text modes:
 
-```tsx
+\`\`\`tsx
 // Default: Uses image mode
 <Logo size="md" />
 
@@ -88,7 +88,7 @@ The Logo component supports both image and text modes:
 
 // Small size
 <Logo size="sm" />
-```
+\`\`\`
 
 ### Logo Specifications
 

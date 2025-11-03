@@ -27,7 +27,7 @@
 ## Cores Detalhadas
 
 ### Light Mode:
-```css
+\`\`\`css
 /* Vermelho - Apenas Primary */
 --primary: oklch(0.55 0.22 25);           /* Vermelho OBSERVANTIA */
 --ring: oklch(0.55 0.22 25);              /* Focus ring vermelho */
@@ -42,10 +42,10 @@
 --chart-3: oklch(0.40 0.02 0);            /* Cinza escuro */
 --chart-4: oklch(0.60 0.03 0);            /* Cinza claro */
 --chart-5: oklch(0.70 0.02 0);            /* Cinza muito claro */
-```
+\`\`\`
 
 ### Dark Mode:
-```css
+\`\`\`css
 /* Vermelho - Apenas Primary */
 --primary: oklch(0.58 0.22 25);           /* Vermelho um pouco mais claro */
 --ring: oklch(0.58 0.22 25);              /* Focus ring vermelho */
@@ -62,25 +62,25 @@
 --chart-3: oklch(0.45 0.02 0);            /* Cinza médio */
 --chart-4: oklch(0.65 0.03 0);            /* Cinza claro */
 --chart-5: oklch(0.75 0.02 0);            /* Cinza muito claro */
-```
+\`\`\`
 
 ## Comparação: Antes vs Agora
 
 ### ANTES (Muito Vermelho):
-```
+\`\`\`
 primary: VERMELHO
 accent: VERMELHO
 charts: TODOS VERMELHO
 sidebar-ring: VERMELHO
-```
+\`\`\`
 
 ### AGORA (Equilibrado):
-```
+\`\`\`
 primary: VERMELHO (apenas botões principais)
 accent: CINZA
 charts: 1 vermelho, 4 cinzas
 sidebar-ring: CINZA
-```
+\`\`\`
 
 ## Proporção Visual
 
@@ -110,13 +110,13 @@ sidebar-ring: CINZA
 
 ## Como Testar
 
-```bash
+\`\`\`bash
 # Reinicie o servidor
 pnpm dev
 
 # Force refresh
 Cmd+Shift+R (Mac) ou Ctrl+Shift+R (Windows)
-```
+\`\`\`
 
 ## Resultado Esperado
 

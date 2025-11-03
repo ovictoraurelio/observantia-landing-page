@@ -32,16 +32,16 @@ Aplicado em globals.css:
 ## Como verificar as mudancas:
 
 ### Passo 1: Reiniciar o servidor de desenvolvimento
-```bash
+\`\`\`bash
 # Pare o servidor se estiver rodando (Ctrl+C)
 # Depois inicie novamente:
 pnpm dev
-```
+\`\`\`
 
 ### Passo 2: Abrir no navegador
-```
+\`\`\`
 http://localhost:3000
-```
+\`\`\`
 
 ### Passo 3: Verificar visualmente
 
@@ -68,7 +68,7 @@ Se não ver as mudanças imediatamente:
 
 ## Estrutura de estilos aplicados:
 
-```tsx
+\`\`\`tsx
 // Logo text variant
 <div style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
   <span style={{ fontWeight: 600, color: "#FFFFFF" }}>OBSERVANT</span>
@@ -85,7 +85,7 @@ Se não ver as mudanças imediatamente:
 }}>
   TRANSPARÊNCIA E CONFORMIDADE EM CADA CONTRATO
 </div>
-```
+\`\`\`
 
 ## Notas técnicas:
 

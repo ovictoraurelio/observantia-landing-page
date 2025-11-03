@@ -18,29 +18,29 @@ Agora o primary color é cinza em vez de vermelho.
 ## Cores Atualizadas:
 
 ### Light Mode:
-```css
+\`\`\`css
 --primary: oklch(0.30 0.02 0);           /* Cinza médio escuro */
 --ring: oklch(0.30 0.02 0);              /* Focus ring cinza */
 --chart-1: oklch(0.30 0.02 0);           /* Chart principal cinza */
 --sidebar-primary: oklch(0.30 0.02 0);   /* Sidebar cinza */
-```
+\`\`\`
 
 ### Dark Mode:
-```css
+\`\`\`css
 --primary: oklch(0.40 0.03 0);           /* Cinza médio claro */
 --ring: oklch(0.40 0.03 0);              /* Focus ring cinza */
 --chart-1: oklch(0.40 0.03 0);           /* Chart principal cinza */
 --sidebar-primary: oklch(0.40 0.03 0);   /* Sidebar cinza */
-```
+\`\`\`
 
 ## Logo (único vermelho):
 
 O logo continua com vermelho apenas no "IA":
-```tsx
+\`\`\`tsx
 // No componente Logo
 <span style={{ fontWeight: 600, color: "#FFFFFF" }}>OBSERVANT</span>
 <span style={{ fontWeight: 800, color: "#E94E2E" }}>IA</span>
-```
+\`\`\`
 
 ## Resultado Visual:
 
@@ -52,13 +52,13 @@ O logo continua com vermelho apenas no "IA":
 
 ## Como Testar:
 
-```bash
+\`\`\`bash
 # Reinicie o servidor
 pnpm dev
 
 # Force refresh
 Cmd+Shift+R (Mac) ou Ctrl+Shift+R (Windows)
-```
+\`\`\`
 
 ## O que você deve ver:
 

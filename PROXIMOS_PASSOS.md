@@ -28,20 +28,20 @@ Como fazer:
 
 ### Passo 2: Verificar instalacao do Sharp
 
-```bash
+\`\`\`bash
 pnpm list sharp
-```
+\`\`\`
 
 Se nao aparecer, instale manualmente:
-```bash
+\`\`\`bash
 pnpm add -D sharp
-```
+\`\`\`
 
 ### Passo 3: Executar o script de otimizacao
 
-```bash
+\`\`\`bash
 node scripts/optimize-logo.js
-```
+\`\`\`
 
 O que sera criado:
 - logo-observantia.png (1024x576) - Logo principal
@@ -54,20 +54,20 @@ O que sera criado:
 ### Passo 4: Criar favicon.ico (Opcional)
 
 Opcao A - Com ImageMagick:
-```bash
+\`\`\`bash
 cd public
 convert favicon-32.png favicon-16.png favicon.ico
 cd ..
-```
+\`\`\`
 
 Opcao B - Online:
 https://www.favicon-generator.org/
 
 ### Passo 5: Testar tudo
 
-```bash
+\`\`\`bash
 pnpm dev
-```
+\`\`\`
 
 Verificar:
 - Logo aparece no header (todas as paginas)
@@ -77,7 +77,7 @@ Verificar:
 
 ## Estrutura Final
 
-```
+\`\`\`
 public/
 ├── logo-observantia-source.png  <- ADICIONAR (voce)
 ├── logo-observantia.png         <- Criado pelo script
@@ -89,7 +89,7 @@ public/
 ├── apple-touch-icon.png         <- Criado pelo script
 ├── og-image.png                 <- Criado pelo script
 └── manifest.json                <- Ja existe
-```
+\`\`\`
 
 ## Resumo Rapido
 
@@ -101,9 +101,9 @@ public/
 ## Se algo der errado
 
 **Sharp nao encontrado:**
-```bash
+\`\`\`bash
 pnpm add -D sharp
-```
+\`\`\`
 
 **Source logo nao encontrado:**
 - Verifique se salvou como: public/logo-observantia-source.png

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { FileText, CheckCircle2, Users, BarChart3, Shield, GitBranch, Clock, FileCheck } from "lucide-react"
+import { FileText, CheckCircle2, Users, BarChart3, Shield, GitBranch, Clock, Github, Mail } from "lucide-react"
 import { Logo } from "@/components/logo"
 
 export default function LandingPage() {
@@ -45,7 +45,7 @@ export default function LandingPage() {
             Fase MVP - T=0 em desenvolvimento
           </Badge>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance leading-tight">
-            Gestão inteligente de documentos administrativos
+            Gestão inteligente de Editais e Contratos
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 text-pretty max-w-2xl mx-auto leading-relaxed">
             Plataforma open source para padronizar, rastrear e validar editais e contratos no IFPE com eficiência,
@@ -58,6 +58,97 @@ export default function LandingPage() {
             <Button size="lg" variant="outline" className="w-full sm:w-auto bg-transparent">
               Ver documentação
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Roadmap Section */}
+      <section className="container mx-auto px-4 py-16 md:py-20">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">Roadmap do Projeto</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
+            Acompanhe o progresso e as entregas do ObservantIA
+          </p>
+        </div>
+
+        <div className="relative max-w-6xl mx-auto">
+          {/* Timeline Line */}
+          <div className="absolute top-24 left-0 right-0 h-1 bg-border hidden md:block" />
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-4">
+            {/* Kickoff */}
+            <div className="relative">
+              <Card className="border-border hover:border-primary/30 transition-colors">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto relative z-10">
+                    <CheckCircle2 className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 text-center">Kickoff</h3>
+                  <p className="text-sm text-muted-foreground text-center mb-4">
+                    Início do projeto e definição de escopo
+                  </p>
+                  <Badge
+                    variant="secondary"
+                    className="w-full justify-center bg-primary/10 text-primary border-primary/20"
+                  >
+                    Concluído
+                  </Badge>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Status Report 1 - Current */}
+            <div className="relative">
+              <Card className="border-accent shadow-lg shadow-accent/20 bg-accent/5">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4 mx-auto relative z-10 animate-pulse">
+                    <Clock className="w-6 h-6 text-accent-foreground" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 text-center">Status Report 1</h3>
+                  <p className="text-sm text-muted-foreground text-center mb-4">Primeira entrega e validação</p>
+                  <Badge variant="secondary" className="w-full justify-center bg-accent text-accent-foreground mb-3">
+                    Em Andamento
+                  </Badge>
+                  <a href="/status-report-1">
+                    <Button size="sm" className="w-full">
+                      Visualizar
+                    </Button>
+                  </a>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Status Report 2 */}
+            <div className="relative">
+              <Card className="border-border hover:border-primary/30 transition-colors opacity-60">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center mb-4 mx-auto relative z-10">
+                    <Clock className="w-6 h-6 text-muted-foreground" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 text-center">Status Report 2</h3>
+                  <p className="text-sm text-muted-foreground text-center mb-4">Segunda entrega e ajustes</p>
+                  <Badge variant="secondary" className="w-full justify-center">
+                    Planejado
+                  </Badge>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Entrega Final */}
+            <div className="relative">
+              <Card className="border-border hover:border-primary/30 transition-colors opacity-60">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center mb-4 mx-auto relative z-10">
+                    <FileText className="w-6 h-6 text-muted-foreground" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 text-center">Entrega Final</h3>
+                  <p className="text-sm text-muted-foreground text-center mb-4">Conclusão e apresentação</p>
+                  <Badge variant="secondary" className="w-full justify-center">
+                    Planejado
+                  </Badge>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
@@ -90,7 +181,7 @@ export default function LandingPage() {
       <section id="funcionalidades" className="container mx-auto px-4 py-20 md:py-32">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
-            Funcionalidades completas para gestão documental
+            Funcionalidades completas para gestão de Editais e Contratos
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
             Ferramentas integradas para cada etapa do processo administrativo
@@ -178,7 +269,7 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance">
-                Transforme a gestão documental do seu campus
+                Transforme a gestão de Editais e Contratos da sua organização
               </h2>
               <div className="space-y-6">
                 <div className="flex gap-4">
@@ -333,6 +424,221 @@ export default function LandingPage() {
         </div>
       </section>
 
+      <section id="equipe" className="container mx-auto px-4 py-20 md:py-32">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">Equipe de Desenvolvimento</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
+            Profissionais dedicados ao desenvolvimento da plataforma ObservantIA
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <Card className="border-border hover:border-primary/50 transition-colors">
+            <CardContent className="p-6 text-center">
+              <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <div className="text-3xl font-bold text-primary">VA</div>
+              </div>
+              <h3 className="text-xl font-semibold mb-1">Victor Aurélio</h3>
+              <p className="text-sm text-muted-foreground mb-3">Gestor de Projeto</p>
+              <div className="flex items-center justify-center gap-2">
+                <a
+                  href="mailto:vags@cin.ufpe.br"
+                  className="w-8 h-8 bg-muted hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors"
+                  aria-label="Email Victor Aurélio"
+                >
+                  <Mail className="w-4 h-4" />
+                </a>
+                <a
+                  href="https://github.com/ovictoraurelio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 bg-muted hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors"
+                  aria-label="GitHub Victor Aurélio"
+                >
+                  <Github className="w-4 h-4" />
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-border hover:border-primary/50 transition-colors">
+            <CardContent className="p-6 text-center">
+              <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <div className="text-3xl font-bold text-primary">AC</div>
+              </div>
+              <h3 className="text-xl font-semibold mb-1">André Campos</h3>
+              <p className="text-sm text-muted-foreground mb-3">Desenvolvedor Backend</p>
+              <div className="flex items-center justify-center gap-2">
+                <a
+                  href="mailto:avcl@cin.ufpe.br"
+                  className="w-8 h-8 bg-muted hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors"
+                  aria-label="Email André Campos"
+                >
+                  <Mail className="w-4 h-4" />
+                </a>
+                <a
+                  href="#"
+                  className="w-8 h-8 bg-muted hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors"
+                  aria-label="GitHub André Campos"
+                >
+                  <Github className="w-4 h-4" />
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-border hover:border-primary/50 transition-colors">
+            <CardContent className="p-6 text-center">
+              <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <div className="text-3xl font-bold text-primary">AA</div>
+              </div>
+              <h3 className="text-xl font-semibold mb-1">Alandrey Alves</h3>
+              <p className="text-sm text-muted-foreground mb-3">Desenvolvedor Frontend</p>
+              <div className="flex items-center justify-center gap-2">
+                <a
+                  href="mailto:aas7@cin.ufpe.br"
+                  className="w-8 h-8 bg-muted hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors"
+                  aria-label="Email Alandrey Alves"
+                >
+                  <Mail className="w-4 h-4" />
+                </a>
+                <a
+                  href="#"
+                  className="w-8 h-8 bg-muted hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors"
+                  aria-label="GitHub Alandrey Alves"
+                >
+                  <Github className="w-4 h-4" />
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section id="especialistas" className="bg-muted/30 py-20 md:py-32">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">Especialistas no Tema</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
+              Profissionais do IFPE que orientam e validam as soluções desenvolvidas
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <Card className="border-border hover:border-accent/50 transition-colors">
+              <CardContent className="p-8">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-32 h-32 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full mb-4 flex items-center justify-center">
+                    <div className="text-4xl font-bold text-accent">ME</div>
+                  </div>
+                  <h3 className="text-2xl font-semibold mb-2">Prof. Msc. Marco Eugênio</h3>
+                  <p className="text-sm text-muted-foreground mb-2">Instituto Federal de Pernambuco</p>
+                  <Badge variant="secondary" className="mb-4">
+                    Cliente e Especialista
+                  </Badge>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                    Especialista em gestão administrativa e processos de contratação pública no IFPE
+                  </p>
+                  <a
+                    href="mailto:maea@cin.ufpe.br"
+                    className="inline-flex items-center gap-2 text-sm text-primary hover:text-accent transition-colors"
+                  >
+                    <Mail className="w-4 h-4" />
+                    maea@cin.ufpe.br
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border hover:border-accent/50 transition-colors">
+              <CardContent className="p-8">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-32 h-32 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full mb-4 flex items-center justify-center">
+                    <div className="text-4xl font-bold text-accent">AS</div>
+                  </div>
+                  <h3 className="text-2xl font-semibold mb-2">André Silva</h3>
+                  <p className="text-sm text-muted-foreground mb-2">Instituto Federal de Pernambuco</p>
+                  <Badge variant="secondary" className="mb-4">
+                    Especialista
+                  </Badge>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                    Especialista em conformidade legal e validação de editais e contratos
+                  </p>
+                  <a
+                    href="#"
+                    className="inline-flex items-center gap-2 text-sm text-primary hover:text-accent transition-colors"
+                  >
+                    <Mail className="w-4 h-4" />
+                    Contato disponível em breve
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section id="orientadores" className="container mx-auto px-4 py-20 md:py-32">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">Orientadores do Projeto</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
+            Professores da UFPE especialistas em Gestão de Processos e Projetos
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <Card className="border-border hover:border-primary/50 transition-colors">
+            <CardContent className="p-8">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-32 h-32 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full mb-4 flex items-center justify-center">
+                  <div className="text-4xl font-bold text-primary">AV</div>
+                </div>
+                <h3 className="text-2xl font-semibold mb-2">Prof. Dr. Alexandre Vasconcelos</h3>
+                <p className="text-sm text-muted-foreground mb-2">Centro de Informática - UFPE</p>
+                <Badge variant="secondary" className="mb-4">
+                  Orientador Principal
+                </Badge>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                  Especialista em Engenharia de Software, Gestão de Processos de Negócio e Planejamento de Projetos
+                </p>
+                <a
+                  href="mailto:amlv@cin.ufpe.br"
+                  className="inline-flex items-center gap-2 text-sm text-primary hover:text-accent transition-colors"
+                >
+                  <Mail className="w-4 h-4" />
+                  amlv@cin.ufpe.br
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-border hover:border-primary/50 transition-colors">
+            <CardContent className="p-8">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-32 h-32 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full mb-4 flex items-center justify-center">
+                  <div className="text-4xl font-bold text-primary">JV</div>
+                </div>
+                <h3 className="text-2xl font-semibold mb-2">Profª Drª Jéssyka Vilela</h3>
+                <p className="text-sm text-muted-foreground mb-2">Centro de Informática - UFPE</p>
+                <Badge variant="secondary" className="mb-4">
+                  Co-orientadora
+                </Badge>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                  Especialista em Engenharia de Requisitos, Gestão de Projetos e Processos de Software
+                </p>
+                <a
+                  href="#"
+                  className="inline-flex items-center gap-2 text-sm text-primary hover:text-accent transition-colors"
+                >
+                  <Mail className="w-4 h-4" />
+                  Contato disponível em breve
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       {/* Open Source Section */}
       <section id="open-source" className="bg-primary text-primary-foreground py-20 md:py-32">
         <div className="container mx-auto px-4 text-center">
@@ -369,10 +675,10 @@ export default function LandingPage() {
       <section className="container mx-auto px-4 py-20 md:py-32">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance">
-            Pronto para modernizar sua gestão documental?
+            Pronto para modernizar a gestão de Editais e Contratos?
           </h2>
           <p className="text-lg text-muted-foreground mb-8 text-pretty leading-relaxed">
-            Junte-se aos campi do IFPE que já estão transformando seus processos administrativos com o ObservantIA.
+            Junte-se às organizações que já estão transformando seus processos administrativos com o ObservantIA.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" className="w-full sm:w-auto">
@@ -392,7 +698,7 @@ export default function LandingPage() {
             <div>
               <Logo size="md" showTagline className="mb-4" />
               <p className="text-sm text-muted-foreground leading-relaxed mt-2">
-                Plataforma open source para gestão documental no IFPE.
+                Plataforma open source para gestão de Editais e Contratos.
               </p>
             </div>
 
@@ -452,31 +758,32 @@ export default function LandingPage() {
               <h3 className="font-semibold mb-3">Comunidade</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  <a href="#" className="hover:text-foreground transition-colors">
+                  <a
+                    href="https://github.com/observantia"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-foreground transition-colors"
+                  >
                     GitHub
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-foreground transition-colors">
-                    Contribuir
+                    Blog
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-foreground transition-colors">
-                    Licença
+                    Eventos
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-foreground transition-colors">
-                    Contato
+                    Fórum
                   </a>
                 </li>
               </ul>
             </div>
-          </div>
-
-          <div className="mt-12 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-            <p>© 2025 ObservantIA - IFPE. Todos os direitos reservados. Licença GPLv3.</p>
           </div>
         </div>
       </footer>
