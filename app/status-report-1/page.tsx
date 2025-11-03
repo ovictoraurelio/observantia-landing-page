@@ -320,7 +320,7 @@ export default function StatusReport1Page() {
                     </Button>
                     <Button 
                       size="sm" 
-                      className="flex-1"
+                      className="flex-1 hover:bg-accent hover:border-accent transition-all duration-200 cursor-pointer active:scale-95"
                       onClick={() => setSelectedImage({ src: "/entregaveis/MatrizCSD.png", alt: "Matriz CSD - Customer Scenario Discovery" })}
                     >
                       <Eye className="w-4 h-4 mr-2" />
@@ -368,7 +368,7 @@ export default function StatusReport1Page() {
                     </Button>
                     <Button 
                       size="sm" 
-                      className="flex-1"
+                      className="flex-1 hover:bg-accent hover:border-accent transition-all duration-200 cursor-pointer active:scale-95"
                       onClick={() => setSelectedImage({ src: "/entregaveis/MatrizSIPOC.png", alt: "Matriz SIPOC - Supplier, Input, Process, Output, Customer" })}
                     >
                       <Eye className="w-4 h-4 mr-2" />
@@ -452,7 +452,7 @@ export default function StatusReport1Page() {
                   </Button>
                   <Button 
                     size="sm" 
-                    className="flex-1"
+                    className="flex-1 hover:bg-accent hover:border-accent transition-all duration-200 cursor-pointer active:scale-95"
                     onClick={() => setSelectedImage({ src: "/entregaveis/fluxo-as-is.svg", alt: "Fluxo AS-IS - Processo atual de gestão de editais e contratos" })}
                   >
                     <Eye className="w-4 h-4 mr-2" />
@@ -536,7 +536,7 @@ export default function StatusReport1Page() {
           <div className="relative w-full min-h-screen bg-background/95 backdrop-blur-sm">
             <button
               onClick={() => setSelectedImage(null)}
-              className="fixed top-4 right-4 z-50 w-12 h-12 rounded-full bg-background border-2 border-border shadow-lg flex items-center justify-center hover:bg-accent hover:border-accent transition-colors"
+              className="fixed top-4 right-4 z-50 w-12 h-12 rounded-full bg-background border-2 border-border shadow-lg flex items-center justify-center hover:bg-accent hover:border-accent hover:shadow-xl transition-all duration-200 cursor-pointer active:scale-95"
               aria-label="Fechar"
             >
               <X className="w-6 h-6" />
