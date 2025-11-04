@@ -31,6 +31,23 @@ export default function StatusReport1Page() {
         </div>
       </section>
 
+      {/* Logo Link */}
+      <section className="container mx-auto px-4 py-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <a 
+            href="https://www.canva.com/design/DAG3qlSxJx8/8qGyL4kBhyahV3eNJ5DZuQ/edit?utm_content=DAG3qlSxJx8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
+          >
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+            </svg>
+            Ver apresentação
+          </a>
+        </div>
+      </section>
+
       {/* Documents Grid */}
       <section className="container mx-auto px-4 py-8 md:py-12">
         <div className="max-w-6xl mx-auto space-y-8">
